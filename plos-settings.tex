@@ -6,9 +6,6 @@
 % Use adjustwidth environment to exceed column width (see example table in text)
 \usepackage{changepage}
 
-% Use Unicode characters when possible
-\usepackage[utf8x]{inputenc}
-
 % textcomp package and marvosym package for additional characters
 \usepackage{textcomp,marvosym}
 
@@ -21,11 +18,8 @@
 % line numbers
 \usepackage[right]{lineno}
 
-% framed boxes
-\usepackage{mdframed}
-
 % ligatures disabled
-\usepackage{microtype}
+\usepackage[nopatch=eqnum]{microtype}
 \DisableLigatures[f]{encoding = *, family = * }
 
 % color can be used to apply background shading to table cells only
@@ -33,9 +27,6 @@
 
 % array package and thick rules for tables
 \usepackage{array}
-
-% enumerate package lets us use letters instead of numbers
-\usepackage{enumerate}
 
 % create "+" rule type for thick vertical lines
 \newcolumntype{+}{!{\vrule width 2pt}}
@@ -54,16 +45,14 @@
 \hline
 \noalign{\global\arrayrulewidth\savedwidth}}
 
-\usepackage{color}
-
 % Remove comment for double spacing
-%\usepackage{setspace}
+%\usepackage{setspace} 
 %\doublespacing
 
 % Text layout
 \raggedright
 \setlength{\parindent}{0.5cm}
-\textwidth 5.25in
+\textwidth 5.25in 
 \textheight 8.75in
 
 % Bold the 'Figure #' in the caption and separate it from the title/caption with a period
@@ -71,24 +60,28 @@
 \usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
 \renewcommand{\figurename}{Fig}
 
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
 % Remove brackets from numbering in List of References
 \makeatletter
 \renewcommand{\@biblabel}[1]{\quad#1.}
 \makeatother
 
-% Leave date blank
-\date{}
 
 % Header and Footer with logo
 \usepackage{lastpage,fancyhdr,graphicx}
 \usepackage{epstopdf}
-\pagestyle{myheadings}
+%\pagestyle{myheadings}
 \pagestyle{fancy}
 \fancyhf{}
-\setlength{\headheight}{27.023pt}
-\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
 \rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
 \fancyheadoffset[L]{2.25in}
 \fancyfootoffset[L]{2.25in}
-\lfoot{\sf PLOS}
+\lfoot{\today}
+
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{#1}}

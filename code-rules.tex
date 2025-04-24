@@ -1,5 +1,4 @@
 \documentclass[10pt,letterpaper]{article}
-
 \input{plos-settings}
 
 \begin{document}
@@ -7,22 +6,754 @@
 
 \begin{flushleft}
 {\Large
-\textbf\newline{10 Simple Rules for making your code last beyond your current job}
+\textbf\newline{10 quick tips for making your code last beyond your current job}
 }
 \newline
 \\
-{Richard Littauer}\textsuperscript{*}
+Richard Littauer\textsuperscript{1*},
+Clare Dillon\textsuperscript{2},
+Priyanka Ojha\textsuperscript{3},
+Ian McInerney\textsuperscript{4},
+Georg Link\textsuperscript{5},
+Mala Kumar\textsuperscript{6},
+Daniel S. Katz\textsuperscript{7},
+Greg Wilson\textsuperscript{8},
+Eman Abdullah AlOmar\textsuperscript{9},
+Mohamed Wiem Mkaouer\textsuperscript{10},
+David Lippert\textsuperscript{11},
+Daniel R. McCloy\textsuperscript{12},
+Bill Branan\textsuperscript{13},
+David Pérez-Suárez\textsuperscript{14},
+Sam Cunliffe\textsuperscript{15},
+Chang Liao\textsuperscript{16},
+Christoph Treude\textsuperscript{17},
+Tobias Augspurger\textsuperscript{18},
+Sylwester Arabas\textsuperscript{19},
+Ethan P. White\textsuperscript{20},
+Fang Liu\textsuperscript{21},
+Geoffrey Lentner\textsuperscript{22},
+David Eyers\textsuperscript{23},
+Jouni Helske\textsuperscript{24},
+Elena Findley-de Regt\textsuperscript{25},
+Kris Bubendorfer\textsuperscript{26},
+Paola Corrales\textsuperscript{27},
+Pieter Huybrechts\textsuperscript{28},
+Phani Velicheti\textsuperscript{29},
+Daniel Morillo-Cuadrado\textsuperscript{30},
+Tommy Guy\textsuperscript{31},
+Jan Ainali\textsuperscript{32}
 \\
 \bigskip
-\textbf{*} richard.littauer@gmail.com.
+\textbf{1} CURIOSS, SustainOSS, GNOME Foundation, and Te Herenga Waka Victoria University of Wellington, \orcid{0000-0001-5428-7535}\\
+\textbf{2} CURIOSS, Lero, University of Galway, Ireland, \orcid{0009-0008-6205-0296}\\
+\textbf{3} \orcid{0000-0002-6844-6493}\\
+\textbf{4} \orcid{0000-0003-2616-9771}\\
+\textbf{5} Bitergia, \orcid{0000-0001-6769-7867}\\
+\textbf{6} unknown\\
+\textbf{7} University of Illinois Urbana-Champaign, IL, USA, \orcid{0000-0001-5934-7525}\\
+\textbf{8} \orcid{0000-0001-8659-8979}\\
+\textbf{9} \orcid{0000-0003-1800-9268}\\
+\textbf{10} \orcid{0000-0001-6010-7561}\\
+\textbf{11} \orcid{0009-0003-6444-9595}\\
+\textbf{12} \orcid{0000-0002-7572-3241}\\
+\textbf{13} \orcid{0000-0002-4735-6624}\\
+\textbf{14} \orcid{0000-0003-0784-6909}\\
+\textbf{15} \orcid{0000-0003-0167-8641}\\
+\textbf{16} \orcid{0000-0002-7348-8858}\\
+\textbf{17} \orcid{0000-0002-6919-2149}\\
+\textbf{18} Unknown\\
+\textbf{19} \orcid{0000-0003-2361-0082}\\
+\textbf{20} Department of Wildlife Ecology and Conservation, University of Florida, Gainesville, FL, USA \orcid{0000-0001-6728-7745}\\
+\textbf{21} \orcid{0000-0002-3383-2191}\\
+\textbf{22} \orcid{0000-0001-9314-0683}\\
+\textbf{23} \orcid{0000-0002-7284-8006}\\
+\textbf{24} INVEST Research Flagship Centre, University of Turku, Finland, \orcid{0000-0001-7130-793X}\\
+\textbf{25} Unknown\\
+\textbf{26} \orcid{0000-0003-4315-8337}\\
+\textbf{27} \orcid{0000-0003-1923-9129}\\
+\textbf{28} Research Institute for Nature and Forest (INBO), Brussels, Belgium, \orcid{0000-0002-6658-6062}\\
+\textbf{29} \orcid{0009-0004-2580-3624}\\
+\textbf{30} Universidad Nacional de Educación a Distancia (UNED), Spain, \orcid{0000-0003-3021-3878}\\
+\textbf{31} \orcid{0009-0003-3652-5036}\\
+\textbf{32} \orcid{0000-0001-8747-1670}
+
+
+* richard@burntfen.com
 \end{flushleft}
+
+\section*{Abstract}
+
+FIXME
+
+
+\section*{Author summary}
+
+FIXME
+
+\linenumbers
 
 \section*{Introduction}
 
+The state of academic research is often precarious,
+particularly for those who work on research software,
+an asset that is essential to modern research \cite{Pearson2025}
+but often underfunded, undercited, and overlooked \cite{Carver2022}.
+The situation is worsening due to the global political climate
+and the breakdown of established norms and practices.
+Academic researchers in all disciplines are facing losses of funding or jobs,
+a smaller pool of incoming students \cite{Mallapaty2025},
+and institutional policies that demand immediate returns on investment.
+Researchers in non-academic organizations,
+such as government offices, NGOs, or non-profits are also impacted \cite{Woodward2025}.
+The scope of instability is global:
+institutional agreements between universities are tenuous,
+national research strategies are being upended,
+and the political environment and associated public funding are rapidly changing \cite{Nature2025}.
+
+In this environment it is important that research software be \emph{resilient}.
+Code should be built to outlast situations where the author changes workplace or industries,
+where partnernships fail or a lab or institution closes down,
+and where digital infrastructures shift and tooling ecosystems change.
+Further,
+as part of the global push for more responsible research assessment
+(\href{https://sfdora.org/}{DORA}, \href{https://coara.eu/}{coARA}, \href{https://adore.software/}{ADORE.software}),
+research software is increasingly being recognized as a significant and impactful component of researchers' profiles.
+The process of building resilient code can help the author as well as the code,
+even if their job transition is expected or welcomed.
+
+We present ten concrete tips to ensure your code remains accessible and usable by others
+even if your job situation is uncertain.
+The aim is to help you leave your project in a state
+where you or anyone else can pick up where you left off if need be.
+The tips are ordered by priority:
+the first few will help you quickly ensure preservation of your code in its current state,
+while the rest will help ensure the ongoing use and development of the code in the long run.
+You do not need to follow each one to make things better,
+but instead can do what you can,
+where you are,
+with what you have.
+
+Even if your job is not in danger,
+following this guide will help you avoid legal, technical and practical obstacles
+for others to access and use your code,
+to contribute code back to your project,
+and to reproduce and cite your work.
+While there are times when retaining code or making it widely available is not ideal,
+overall these tips will apply to most research software
+and will improve its auditability, and hence credibility.
+As well,
+the goal of this work is not to keep you on the hook for maintaining all of your code going forward,
+nor to put you at risk of litigation for releasing work out of copyright.
+Instead, we hope to help leave your code in a better state
+so that you can step away knowing you did what you could.
+
+This guide focuses on software.
+Other resources already exist for data,
+including \href{https://www.nature.com/articles/d41586-023-01929-7}{guides on sharing data}
+and archives such as \href{https://zenodo.org/}{Zenodo} or \href{https://figshare.com/}{FigShare},
+or more broadly the \href{https://eotarchive.org/}{End Of Term Archive}
+or the \href{http://archive.org/}{Internet Archive}.
+There are no projects that we have found that focus solely on hardening code in the face of job instability.
+Some general resources exist,
+such as the \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC9562067/}{FAIR Principles for Research Software}.
+Aligning your software with FAIR principles is an important long-term goal,
+but short-term work to preserve research software is also crucial given the current environment.
+
+Before doing any of these things: Do not break the law or policies at
+your institution. Your work is not worth putting yourself at legal risk.
+
+\section*{1. Consider your threat model}
+
+When making plans, it's useful to know what you're planning \emph{for}.
+Being explicit about \textbf{threat models} helps you prioritize,
+build consensus with colleagues,
+and check whether you've forgotten something important.
+
+\begin{enumerate}
+\item
+  \textbf{Individual threats} are those that affect one or a few members   of your team,
+  such as a foreign student having their visa revoked without notice
+  or a contributor taking extended leave.
+  Especially for   software under the maintenance of a single author,
+  individual threats can also come from more mundane career or life changes,
+  when the main developer lacks resources to maintain a project or loses access to it
+  while the software is still valuable to others.
+  The most common way to prepare for this is to require everyone to document their work thoroughly,
+  but that rarely works in practice:
+  \begin{enumerate}
+  \item
+    The hours spent writing those descriptions are hours \emph{not} spent doing research,
+    so people will always short-change the former to focus on the latter.
+  \item
+    People invariably fail to write down the ``obvious'' parts of their work
+    that are anything but obvious to the next person.
+  \end{enumerate}
+  In practice,
+  ``automate what you can and create checklists for what you can't'' seems to be a better approach,
+  particularly if you check those checklists
+  by having someone else try to use them while their authors are still available to take notes and update them.
+
+\item
+  \textbf{Leadership threats} are individual threats that affect the project's leader,
+  such as the leader being doxxed or targeted personally in the media because of their position.
+  One way to prepare is to have a designated successor
+  (who can also stand in for you if you ever want to take a holiday).
+  Another is to talk with peers about who will inherit what if your project is shut down.
+
+\item
+  \textbf{Institutional threats} are those that affect large groups at once,
+  such as your university or professional association shutting down or downsizing
+  due to a natural or human-made disaster.
+  In such events so many people may be affected at the same time that
+  the rest of the community can't absorb them.
+  Regional and national governments handle disasters like these
+  by having evacuation plans to get victims to safe(r) places
+  and corollary plans for putting beds in high school gyms
+  and flying in food and emergency medical personnel to help people when they arrive.
+  The equivalents in research are
+  to have professional associations lobby governments for changes in visa rules for scientific refugees
+  and for contingency funding to support them.
+\item
+  \textbf{Global threats} are ones that affect everyone,
+  not just researchers.
+  For example, there is no technical or legal obstacle to the US government
+  requiring American companies to charge a dollar a minute for video conferencing calls
+  involving participants outside the United States.
+  Similar levies on email,
+  file storage,
+  and other online services would paradoxically have \emph{less} long-term impact on research
+  than the targeted threats described above,
+  as they would force national governments to find effective remedies quickly.
+  There are calls for digital sovereignty coming from governments and lobby groups
+  that may also influence where code can and should be stored and shared,
+  including national efforts in
+  \href{https://www.reuters.com/world/europe/dutch-parliament-calls-end-reliance-us-software-2025-03-18/}{the Netherlands},
+  \href{https://www.sovereign.tech/}{Germany},
+  and \href{https://zenodo.org/records/15080979}{New Zealand},
+  the \href{https://www.politico.eu/article/push-for-eurostack-as-eu-us-tech-tensions-grow/}{proposal for a EuroStack},
+  and this \href{https://techcrunch.com/2025/03/16/european-tech-industry-coalition-calls-for-radical-action-on-digital-sovereignty-starting-with-buying-local/}{open letter from the European Tech Industry}.
+
+\end{enumerate}
+
+Figuring out what you're planning for is the first item in our recommendations
+because everything else depends on it.
+As is the case in all disasters,
+making those plans before you need them helps reduce the odds of them being needed,
+as the process may help you identify risks you can eliminate.
+
+\section*{2. Get sign-off on releasing it publicly}
+
+Some institutions have specific policies for releasing code publicly or licensing it appropriately.
+The first actionable step is to find out what policies your institution follows,
+and whether or not you need sign-off from someone before releasing your code.
+Some institutions will demand that code be released publicly;
+others will prohibit it.
+Demands might also originate from funding agencies
+(e.g.,
+EU\footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en}}
+and NASA\footnote{\url{https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities}})
+or from research journals where you plan to publish the research
+\cite{Katz2018,Ham2019}.
+Find out where your code sits.
+
+If your institution has a policy regarding open source code,
+get sign-off for your code \emph{now}.
+Contact code reviewers who can review your code if that is necessary for publishing your work.
+If there is no formal sign-off process,
+that means you may be in charge of your code,
+which may make it easier for you to make it publicly available.
+
+If you are unsure,
+you can often find information by asking your direct line manager,
+the person who pays you,
+or offices like the research office,
+your school office,
+the library,
+the tech transfer office,
+or similar locations.
+If your institution has a dedicated
+\href{https://sustainoss.org/academic-map/universities/index.html}{Open Source Program Office} (OSPO),
+ask them
+or connect to networks like \href{https://curioss.org}{CURIOSS}
+or the \href{https://todogroup.org/}{TODO Group}
+that advocate for OSPOs.
+If you work with multiple institutions,
+look at your contract and the bilateral agreements around products or deliverables.
+
+Don't assume that if you had permission before,
+you have it now or will have it in the future:
+policies may change,
+and you may be left locked into a policy that doesn't benefit the openness of your code.
+Also consider that the person you report to may change or be removed,
+so it's important to act fast if you're interested in the longevity of your code.
+
+If you have your next job lined up,
+prepare to ask about their policies.
+Work licensing into your contracts,
+and know your rights for any potential outputs.
+Making your code comply with policy at the end of the project is more time-consuming than making these decisions early,
+and sometimes may not be possible.
+
+\section*{3. Choose an open license}
+
+Making your code publicly available does not ensure that other people can use it legally:
+without an explicit license,
+you maintain all copyright,
+so most people cannot use your code.
+
+Use the MIT, Apache 2.0, or BSD-3-Clause license to maximize usability.
+If copyleft is preferred use GPLv3 or AGPL-3.0,
+but be aware that copyleft licenses may limit commercial adoption.
+Copyleft comes with advantages and disadvantages:
+it can protect your open source project and the community around it from exploitation,
+but it can also limit adoption.
+If you need help,
+go to \href{http://choosealicense.com}{choosealicense.com},
+refer to \cite{Furtonato2021},
+or look at institutional policies from institutions similar to your own.
+
+There are licenses that are beyond the scope of
+\href{https://opensource.org/licenses}{open source licenses}
+approved by the Open Source Initiative (OSI)
+that may be useful for your code.
+For instance,
+\href{https://creativecommons.org/}{Creative Commons} licenses can be used for your documentation
+or assets that are attached to your code.
+\href{https://ethicalsource.dev/}{Ethical licenses}
+or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be helpful.
+Choose a license that fits your use case.
+
+Add the \texttt{LICENSE} file to your code,
+most often at the root of your repository.
+This should have the contents of the license.
+This may be more legally binding than just referencing a license in your documentation.
+You may also need to consider copyright laws for countries besides your own if your code is hosted online.
+If you have doubts,
+check with your legal team at your institution.
+
+\section*{4. Put your code somewhere else}
+
+Always remember LOCKSS: Lots of Copies Keep Stuff Safe.
+This is one of the easiest ways to ensure that your code remains accessible and discoverable.
+Beyond risks to your code relating to technology,
+some recent threats are more political and targeted:
+you also want to ensure that institutional resources you rely on cannot be blocked or turned against you.
+
+If your code only exists locally,
+put it online somewhere.
+\href{https://github.com/}{GitHub},
+\href{https://gitlab.com}{GitLab},
+and \href{https://codeberg.org/}{Codeberg} are all social coding platforms (forges)
+that provide easy ways to store code.
+\href{https://www.softwareheritage.org/how-to-archive-reference-code/}{Software Heritage}
+archives software from multiple forges.
+You can also snapshot the current state of repositories in a compressed archive file
+(e.g., \texttt{.zip} or \texttt{.tar.gz})
+and put those copies on any archival research repository like \href{https://osf.io/}{Open Science Foundation} (OSF),
+\href{https://zenodo.org/}{Zenodo},
+or \href{https://figshare.com/}{figshare}.
+Zenodo also provides an integration with GitHub
+by which creating a tagged release on GitHub triggers a new deposit of the repository on Zenodo,
+complete with a DOI.
+You can do this even if you do not have a publication that needs a DOI for your code.
+
+If your code is already in an online repository,
+mirror that repository on multiple platforms.
+You can also make sure you have current local clones of all your projects,
+on multiple computers if possible.
+Also,
+it is a good idea to fork and download projects that you value or your software depends on,
+so if they are taken down,
+you are not starting from scratch.
+Online forks of projects are not enough,
+as they may not be persistent if the source code is removed.
+Don't assume a single storage solution is going to make it accessible;
+multiple storage places are always better.
+If you do this work,
+you can document it
+\href{https://ropensci.org/blog/2022/03/22/safeguards-and-backups-for-github-organizations/}{like rOpenSci has}.
+
+If possible,
+host your code under a community-maintained organization,
+and not solely on your own account or under an institutional organization.
+Instead, clone it to your personal account.
+
+Remember that the choice of platform for organizing your code
+will influence where your documentation is stored and whether you maintain easy control of it.
+For instance,
+GitHub issues and wikis are not easily exportable.
+You may be able to export the text into a local, machine-readable archive
+that you could mine using a localized LLM,
+for instance using \href{https://github.com/jlord/offline-issues}{this tool}.
+Your social network,
+on the other hand,
+is not exportable,
+and social lock-in to a single platform makes coding platforms non-fungible.
+
+Distributing your code as an independent software package---such as a Python package on PyPI
+or \href{https://anaconda.org/anaconda/conda}{Conda},
+or R package on \href{https://cran.r-project.org/}{CRAN}---integrates it into
+a broader ecosystem and fosters community collaboration.
+It also ensures that your code is stored on yet another platform.
+
+Consider institutional,
+\href{https://amt.coretrustseal.org/certificates/}{national},
+or \href{https://safeguar.de/}{international} data repositories for added longevity.
+This makes it more likely that your code will be available or accessible later.
+It is not a good idea to rely solely on employer-associated repositories (like Google Drive)
+unless you retain control.
+This also applies to email addresses used as logins for platforms
+if you lose access to your email,
+you may lose access to your code.
+Attaching the software with a secondary email which is not tied to a specific institution
+adds also an additional point of contact for others.
+Furthermore,
+adding your \href{https://orcid.org/}{ORCID} as metadata
+allows a persistent link to a profile that you can control,
+and change in the future in case your point of contact changes.
+
+You can also talk to an international colleague who is in your field
+and ask them if you can share your code with them, and vice versa.
+This has the added benefit of making someone else aware of your code.
+
+But,
+as always,
+if your institution has a policy for sharing code publicly,
+follow it.
+If they have a policy that talks about what you do with your code if you are let go or forced to leave your job,
+follow it.
+If there is no policy,
+ensure that you are able to clone everything locally and share widely.
+
+\section*{5. Document your code}
+
+Your code is only as useful as the use others can make of it.
+Document it as much as is necessary for others to be able to pick it up and use it as intended.
+Don't go overboard:
+if you're reading this,
+you don't have time to document every method.
+
+In particular,
+add a \texttt{README.md} at the root of your repository
+that explains the purpose, setup, and usage of your work.
+If you can,
+add a tutorial or an explanation for how to use the major functions of the code.
+Adding a minimal example that shows how to use it makes it easier for others to get started.
+If it is a component or a library,
+try showing how to integrate it into existing systems.
+Consider sharing a screen recording of you using your code.
+Instructions on how to build,
+launch, test, or deploy it are also valuable,
+but a README is the first step.
+There are guides on writing documentation that may help
+\cite{Huybrechts2024,Littauer2025,Katz2025,Turing2025}.
+
+If you can, make the link to documentation easy to find, or available at a canonical URL.
+Bundling and archiving documentation together with the code would also help.
+
+A contributor's guide that explains how to set up a development environment,
+how to add tests,
+and how to become part of the project's team can be extremely helpful.
+Having one of these also leads to an increase in contributions \cite{Sholler2019}.
+Your project is more than just your code:
+it is your governance,
+your issue tracker and changelogs,
+and your shared values.
+If you can, write these down.
+
+If you haven't named your code yet,
+consider naming it in an inclusive way
+without hinting at direct and exclusive affiliation to a single institution.
+This can help if the code needs to be relocated,
+but also in herding developers from other institutions to contribute.
+
+There are many other steps that are possible for documenting your code \cite{Lee2018}.
+It is worth repeating that you do not need to go overboard.
+Documentation is never finished,
+and documentation is an art,
+not a checklist to be filled out.
+
+\section*{6. Make your code reproducible}
+
+Code can only deliver its full value if it can be re-executed.
+Reproducibility is an essential part of making your code last.
+We touched on this above with the call to document your code.
+Documenting the code includes describing dependencies in a machine-readable way,
+e.g., Python's \href{https://packaging.python.org/en/latest/guides/writing-pyproject-toml/}{pyproject.toml} file,
+an npm \href{https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true}{package.json} file,
+or equivalent manifests.
+When referencing code in your docs or manifests,
+ensure that a version label is included
+so that future users have a way to identify the proper version.
+Versioning also helps in discerning and identifying portions of the code contributed under different affiliations.
+
+Making your code independently executable with consistent outcomes
+is more than just documenting what it needs to run.
+It involves abstracting the code,
+thinking about how it is used,
+and then refactoring it to ensure that it is easier for the next person.
+It also involves considering all of the steps necessary for your code to run.
+That may also mean adding instructions on how to make code run on other machines under different environments.
+If you have access to other machines,
+you can attempt to run your code on them
+and document the process as you go.
+Providing instructions on how to reproduce your results in the cloud
+enables reviewers and followers of your work to skip time-consuming environment setup
+and dive straight into running the code.
+If you use Jupyter notebooks for your work \cite{Perkel2018}
+and host them in public repositories,
+enabling their execution in the cloud can be reduced to a single URL-click
+with platforms such as \href{http://mybinder.org}{mybinder.org}
+or analogous proprietary solutions such as Google Colab
+or \href{https://github.com/features/codespaces}{Github Codespaces}.
+
+If you can, version your runtime environment.
+Use tools like Docker, Podman, renv, conda, or rix to make clear
+what anyone else would need to set up
+to make sure the code is being reproduced in the same computational environment.
+
+Try and prevent avoidable hardware or software vendor lock-in
+that might limit usability of code by another institution.
+If your code or the process you use to work on it
+depends upon access to platforms that you may not keep,
+see if you can find alternatives.
+For instance,
+look into simulation solutions on
+\href{https://www.softwarepreservationnetwork.org/emulation-as-a-service-infrastructure/}{EaaSI}).
+Some proprietary software solutions do have open source alternatives,
+and it is worth documenting if and how one may leverage them to run your code.
+When developing code for specific hardware such GPUs,
+it is worth exploring frameworks that enable the same code to execute---albeit
+with reduced performance---on standard commodity hardware.
+Finally,
+work with common tools if you can.
+They'll make adoption easier,
+as they're generally more portable than obscure projects.
+
+\section*{7. Ensure your code maximizes accessibility of your data}
+
+Data and code live within a shared context.
+As previously mentioned, there are other resources for making your data available.
+Data that is necessary to run or reproduce your code should be made publicly available when possible.
+In order for accessible data to be useful,
+you may need to do some work with your code to ensure that others can use it.
+
+Document your datasets and include metadata describing the data.
+Even if you need to exclude sensitive data,
+you may be able to provide a safe synthetic dataset,
+or include metadata describing the data so that someone else could reasonably do so.
+
+If your code references specific datasets or formats,
+try to link to them in your documentation.
+If your code was used in any publications,
+you can list those publications in your documentation, too.
+
+Avoiding proprietary formats for your data will help make your code more relevant.
+Use CSV, JSON or other types of machine-readable data.
+PDFs lock in the data and are difficult to mine.
+Other formats are preferable for most data.
+Adjust your code accordingly.
+
+If you can, document analysis pipelines using Jupyter Notebooks,
+R Markdown,
+or any standard documentation.
+Provide Makefiles or other workflows to automate data processing.
+Ultimately,
+others may have to make new data to work with your code if yours is not used for a significant period of time.
+Ensuring that those who follow you---including your future self---can do so
+will help extend the reach and impact of your code.
+
+\section*{8. Make your code citable}
+
+Your code is your work.
+If you would like to track how the code is used and the impact it has had,
+you can ensure that properly citing it is easy to do.
+Code is increasingly cited by researchers \cite{Smith2016,Katz2021,Garijo2024}
+and recognized as a research object in its own right.
+Cited work may have a longer lifespan.
+
+Create a DOI for code releases.
+You can do this directly through a
+\href{https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content}{Zenodo integration}
+if you're on GitHub.
+This ensures long-term citation and retrieval even if the repository disappears.
+
+Add a \href{https://citation-file-format.github.io/}{Citation.CFF}
+or \href{https://codemeta.github.io}{codemeta.json} file to your code \cite{Druskat2021}.
+The format captures the metadata associated with the software in the repository,
+which in turn helps to ensure that it is citable by making it easy for others to do so.
+This will enable you to get credit down the road without much effort,
+especially as some generators and tools
+such as \href{https://citation-file-format.github.io/cff-initializer-javascript/}{cffinit},
+\href{https://codemeta.github.io/codemeta-generator/}{codemeta generator},
+and \href{https://github.com/citation-file-format/citation-file-format/blob/main/README.md\#tools-to-work-with-citationcff-files-wrench}{others} exist.
+
+If you have the time,
+consider having your code peer-reviewed and published.
+There are now many places where you can do this,
+including the \href{https://joss.theoj.org/}{Journal of Open Source Software},
+the \href{https://openresearchsoftware.metajnl.com/}{Journal of Open Research Software},
+the \href{http://www.jstatsoft.org}{Journal of Statistical Software},
+the \href{https://journal.r-project.org/}{R Journa}l
+and \href{https://ropensci.org/}{rOpenSci}.
+Make sure to reference any code,
+including your own,
+in any papers that use it.
+
+Another option is publishing your normal work,
+but including your code with that work.
+Submitting your software as a part of the supplementary material of a journal article that uses it
+not only improves the reproducibility of your analyses
+but also acts as a snapshot backup of your software on the publisher's website.
+
+There is work underway to create types of persistent identifiers for research software,
+such as \href{https://interoperable-europe.ec.europa.eu/collection/open-source-observatory-osor/news/swhid-intrinsic-identifier-software-artefacts}{Software Heritage's work on SWHIDs}
+or \href{https://arxiv.org/abs/2501.10415}{this proposal},
+but it is still nascent.
+
+\section*{9. Encourage community adoption}
+
+Publishing your code is not the same as publicizing it.
+The steps so far have focused on things you can do with the code itself,
+but the social aspect of your work is also important.
+
+A short video showing how to use the software,
+a tutorial made for beginners,
+or a short slide deck that other people can incorporate into their classroom lectures or lab sessions
+can make a big difference.
+There are guides on how to do this kind of marketing for science,
+most notably \cite{Kuchner2011}.
+
+Announce your project on relevant mailing lists, forums, or social media.
+Talk about it in your department.
+Ask for other maintainers of your code
+and be prepared to give them something in return:
+compliments,
+a hand up on their projects,
+or the power to merge commits or be a coauthor on your project's publications.
+
+Disseminating your code through tutorials and workshops at conferences
+is an effective strategy to reach and engage potential adopters within your community.
+Tutorials and workshops can offer an opportunity for you,
+as an author,
+to talk about your work and motivate your audience to use it.
+It is also an opportunity for participants to interact directly with your work and appreciate its potential.
+The choice of the conferences, where your potential community gathers, is important.
+Go where your users are.
+
+This networking will enable you to build relationships with attendees who share a keen interest in your research.
+Effective networking is the best way to ensure that you land well,
+and it may be possible for you to land a position where you can continue working on your code.
+
+If you can, get one other person to commit to your code.
+Having community contributions leads to joint IP ownership,
+which makes your work harder to take down by single actors.
+This is especially true for government and industry.
+If you can enable a collaborator from another industry to work on your code,
+it becomes more complicated for any one organization to remove it.
+You can also work their name into the license
+by adding them as one of the holders of the license.
+A simple way to help people get involved is to label and create ``Good First Issues''
+to assist people in finding easy access as contributors.
+
+As always,
+we recommend that you seek advice from both your and your collaborator's organization's legal teams.
+
+\section*{10. Write a succession plan}
+
+All of this work is in the expectation that the code may be used later.
+Even if it isn't,
+you want to leave it in such a state that it could be.
+A succession plan can be used to suss out how others can take over;
+a sunsetting plan can be used as a framework for how to mothball the code permanently.
+Writing either plan will help you know what you're going to do to ensure that the code,
+data,
+and project are bundled up and put away nicely.
+
+This is also useful because this process can have a deliverable in itself:
+a statement of how the project was used and what you accomplished with it.
+Write up the story of the project.
+Share it widely.
+This will make it easier to wind your project down
+while also recognizing that all projects eventually end.
+
+Write up the goals you initially had for this project
+and ask if they were served by the project and whether you succeeded.
+Sometimes,
+it may make sense to fold a project into another one,
+or to ask someone else to take it over.
+The process of writing up a sunsetting plan can involve realizing that
+the project doesn't need to end,
+but your continued involvement may not serve the project.
+Think about whether someone else could be trained to use it,
+or take up leadership for it,
+or fund work on it.
+
+For some projects,
+it may be worth working with a fiscal sponsor such as
+\href{https://numfocus.org/}{NumFOCUS},
+\href{https://sfconservancy.org/}{Software Freedom Conservancy},
+\href{https://www.eclipse.org/}{the Eclipse Foundation},
+or \href{https://oscollective.org/}{Open Source Collective}.
+There are \href{https://sustainoss.org/academic-map/organizations/index.html}{many foundations and fiscal hosts}.
+Through fiscal hosting,
+your project can take donations from its community of users to fund continued maintenance or other project costs.
+Universities or governments are generally not ideal fiscal hosts for software projects,
+due to high overhead costs and procurement processes.
+Smaller hosts like Open Source Collective take a minimal overhead in comparison,
+often an order of magnitude less.
+Some fiscal hosts are more hands on,
+and may help offload much of the work of keeping your code going.
+A key part of using a fiscal host is that
+they put the software in a neutral home where it is no longer owned by a research performing organization.
+This is based on the sponsor owning the intellectual property.
+This also lets people become owners of the project over time
+without having to move to a single institution.
+
+Before you go,
+remember to empower at least one other person to act on behalf of the project.
+If you use GitHub,
+consider designating a
+\href{https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/maintaining-ownership-continuity-of-your-personal-accounts-repositories}{successor account}
+that can administer your repositories if you can no longer access or control them.
+If you don't have a successor designated,
+it still helps to write up a document explaining where the keys are,
+and how to use them.
+
+\section*{11. Talk about what you're doing}
+
+All of this work is labor.
+You'll learn that not all of these steps apply to you,
+and you'll find other steps that could also be useful.
+Further, you may not want to do any of this, and it may feel like pulling teeth.
+
+Make that work meaningful.
+Talk about how hard it is to archive working code.
+Talk about how necessary the code you've written is.
+Talk about how others should protect and harden their systems.
+
+You can also use this process to find more contributors,
+or get others to hold it for you,
+or to get sign off.
+This may help your project live longer and help others use it.
+
+Use Mastodon or Bluesky to find other archives that will be able to host your code in the future.
+These steps will help ensure your work remains accessible and usable,
+regardless of your employment situation.
+
+Your institution may be able to help you,
+with advance notice.
+If your institution has an OSPO,
+ask them to help with this process.
+If not,
+the library or the research office may also have helpful guides.
+
+\section*{Conclusion}
+
+If you learn things, bring them back to the authors of this paper.
 The world is a scary place.
 \cite{Tamburri2020}
 
-\bibliographystyle{unsrt}
 \bibliography{code-rules}
 
 \end{document}
