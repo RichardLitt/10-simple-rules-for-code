@@ -10,81 +10,12 @@
 }
 \newline
 \\
-Richard Littauer\textsuperscript{1*},
-Clare Dillon\textsuperscript{2},
-Priyanka Ojha\textsuperscript{3},
-Ian McInerney\textsuperscript{4},
-Georg Link\textsuperscript{5},
-Mala Kumar\textsuperscript{6},
-Daniel S. Katz\textsuperscript{7},
-Greg Wilson\textsuperscript{8},
-Eman Abdullah AlOmar\textsuperscript{9},
-Mohamed Wiem Mkaouer\textsuperscript{10},
-David Lippert\textsuperscript{11},
-Daniel R. McCloy\textsuperscript{12},
-Bill Branan\textsuperscript{13},
-David Pérez-Suárez\textsuperscript{14},
-Sam Cunliffe\textsuperscript{15},
-Chang Liao\textsuperscript{16},
-Christoph Treude\textsuperscript{17},
-Tobias Augspurger\textsuperscript{18},
-Sylwester Arabas\textsuperscript{19},
-Ethan P. White\textsuperscript{20},
-Fang Liu\textsuperscript{21},
-Geoffrey Lentner\textsuperscript{22},
-David Eyers\textsuperscript{23},
-Jouni Helske\textsuperscript{24},
-Elena Findley-de Regt\textsuperscript{25},
-Kris Bubendorfer\textsuperscript{26},
-Paola Corrales\textsuperscript{27},
-Pieter Huybrechts\textsuperscript{28},
-Phani Velicheti\textsuperscript{29},
-Daniel Morillo-Cuadrado\textsuperscript{30},
-Tommy Guy\textsuperscript{31},
-Jan Ainali\textsuperscript{32}
-\\
-\bigskip
-\textbf{1} CURIOSS, SustainOSS, GNOME Foundation, and Te Herenga Waka Victoria University of Wellington, \orcid{0000-0001-5428-7535}\\
-\textbf{2} CURIOSS, Lero, University of Galway, Ireland, \orcid{0009-0008-6205-0296}\\
-\textbf{3} \orcid{0000-0002-6844-6493}\\
-\textbf{4} \orcid{0000-0003-2616-9771}\\
-\textbf{5} Bitergia, \orcid{0000-0001-6769-7867}\\
-\textbf{6} unknown\\
-\textbf{7} University of Illinois Urbana-Champaign, IL, USA, \orcid{0000-0001-5934-7525}\\
-\textbf{8} \orcid{0000-0001-8659-8979}\\
-\textbf{9} \orcid{0000-0003-1800-9268}\\
-\textbf{10} \orcid{0000-0001-6010-7561}\\
-\textbf{11} \orcid{0009-0003-6444-9595}\\
-\textbf{12} \orcid{0000-0002-7572-3241}\\
-\textbf{13} \orcid{0000-0002-4735-6624}\\
-\textbf{14} \orcid{0000-0003-0784-6909}\\
-\textbf{15} \orcid{0000-0003-0167-8641}\\
-\textbf{16} \orcid{0000-0002-7348-8858}\\
-\textbf{17} \orcid{0000-0002-6919-2149}\\
-\textbf{18} Unknown\\
-\textbf{19} \orcid{0000-0003-2361-0082}\\
-\textbf{20} Department of Wildlife Ecology and Conservation, University of Florida, Gainesville, FL, USA \orcid{0000-0001-6728-7745}\\
-\textbf{21} \orcid{0000-0002-3383-2191}\\
-\textbf{22} \orcid{0000-0001-9314-0683}\\
-\textbf{23} \orcid{0000-0002-7284-8006}\\
-\textbf{24} INVEST Research Flagship Centre, University of Turku, Finland, \orcid{0000-0001-7130-793X}\\
-\textbf{25} Unknown\\
-\textbf{26} \orcid{0000-0003-4315-8337}\\
-\textbf{27} \orcid{0000-0003-1923-9129}\\
-\textbf{28} Research Institute for Nature and Forest (INBO), Brussels, Belgium, \orcid{0000-0002-6658-6062}\\
-\textbf{29} \orcid{0009-0004-2580-3624}\\
-\textbf{30} Universidad Nacional de Educación a Distancia (UNED), Spain, \orcid{0000-0003-3021-3878}\\
-\textbf{31} \orcid{0009-0003-3652-5036}\\
-\textbf{32} \orcid{0000-0001-8747-1670}
-
-
-* richard@burntfen.com
+\input{contributors}
 \end{flushleft}
 
 \section*{Abstract}
 
 FIXME
-
 
 \section*{Author summary}
 
@@ -94,91 +25,70 @@ FIXME
 
 \section*{Introduction}
 
-The state of academic research is often precarious,
+Academic life is often precarious,
 particularly for those who work on research software,
 an asset that is essential to modern research \cite{Pearson2025}
 but often underfunded, undercited, and overlooked \cite{Carver2022}.
-The situation is worsening due to the global political climate
-and the breakdown of established norms and practices.
-Academic researchers in all disciplines are facing losses of funding or jobs,
+The situation has recently worsened dramatically due to changes in the political climate:
+researchers in all disciplines face the loss of funding or jobs,
 a smaller pool of incoming students \cite{Mallapaty2025},
-and institutional policies that demand immediate returns on investment.
-Researchers in non-academic organizations,
-such as government offices, NGOs, or non-profits are also impacted \cite{Woodward2025}.
-The scope of instability is global:
-institutional agreements between universities are tenuous,
-national research strategies are being upended,
-and the political environment and associated public funding are rapidly changing \cite{Nature2025}.
+and institutional policies that prioritize commercial returns.
+Researchers in non-academic organizations
+such as government labs, non-governmental organizations (NGOs), and non-profits are also impacted \cite{Woodward2025}
+as national research strategies are upended
+and associated public funding redirected or cut entirely \cite{Nature2025}.
 
-In this environment it is important that research software be \emph{resilient}.
-Code should be built to outlast situations where the author changes workplace or industries,
-where partnernships fail or a lab or institution closes down,
-and where digital infrastructures shift and tooling ecosystems change.
-Further,
-as part of the global push for more responsible research assessment
-(\href{https://sfdora.org/}{DORA}, \href{https://coara.eu/}{coARA}, \href{https://adore.software/}{ADORE.software}),
-research software is increasingly being recognized as a significant and impactful component of researchers' profiles.
-The process of building resilient code can help the author as well as the code,
-even if their job transition is expected or welcomed.
-
-We present ten concrete tips to ensure your code remains accessible and usable by others
-even if your job situation is uncertain.
-The aim is to help you leave your project in a state
-where you or anyone else can pick up where you left off if need be.
-The tips are ordered by priority:
-the first few will help you quickly ensure preservation of your code in its current state,
-while the rest will help ensure the ongoing use and development of the code in the long run.
-You do not need to follow each one to make things better,
-but instead can do what you can,
+In this environment it is essential that research software projects be \emph{resilient}.
+Code should outlast situations the author changing workplaces or careers,
+partnernships failing,
+a lab closing down,
+or tooling and digital infrastructure becoming unavailable.
+We therefore present FIXME tips to ensure your software remains accessible and usable by others
+even if you are no longer able to work on it.
+You do not need to adopt all of them to make things better;
+instead,
+as in all emergencies,
+you should do what you can,
 where you are,
 with what you have.
 
-Even if your job is not in danger,
-following this guide will help you avoid legal, technical and practical obstacles
-for others to access and use your code,
-to contribute code back to your project,
-and to reproduce and cite your work.
-While there are times when retaining code or making it widely available is not ideal,
-overall these tips will apply to most research software
-and will improve its auditability, and hence credibility.
-As well,
-the goal of this work is not to keep you on the hook for maintaining all of your code going forward,
-nor to put you at risk of litigation for releasing work out of copyright.
-Instead, we hope to help leave your code in a better state
-so that you can step away knowing you did what you could.
-
 This guide focuses on software.
-Other resources already exist for data,
-including \href{https://www.nature.com/articles/d41586-023-01929-7}{guides on sharing data}
-and archives such as \href{https://zenodo.org/}{Zenodo} or \href{https://figshare.com/}{FigShare},
-or more broadly the \href{https://eotarchive.org/}{End Of Term Archive}
-or the \href{http://archive.org/}{Internet Archive}.
-There are no projects that we have found that focus solely on hardening code in the face of job instability.
-Some general resources exist,
-such as the \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC9562067/}{FAIR Principles for Research Software}.
-Aligning your software with FAIR principles is an important long-term goal,
-but short-term work to preserve research software is also crucial given the current environment.
-
-Before doing any of these things: Do not break the law or policies at
-your institution. Your work is not worth putting yourself at legal risk.
+Other guides already exist for data \cite{Perkel2023},
+and archives such as \href{https://zenodo.org/}{Zenodo},
+\href{https://figshare.com/}{FigShare},
+the \href{https://eotarchive.org/}{End Of Term Archive}
+or the \href{http://archive.org/}{Internet Archive}
+are now widely used to ensure long-term availability.
+However,
+we have not found any guide to making research software resilient
+or to \emph{sunsetting} it (i.e., phasing it out gracefully).
+Even if your job is not in danger,
+these tips will help others access and use your code,
+contribute to your project,
+and to reproduce and cite your work.
+As such,
+our recommendations
+are part of the global push for more equitable assessment of research contributions
+by initiatives like \href{https://sfdora.org/}{DORA}, \href{https://coara.eu/}{coARA}, and \href{https://adore.software/}{ADORE.software}.
 
 \section*{1. Consider your threat model}
 
 When making plans, it's useful to know what you're planning \emph{for}.
 Being explicit about \textbf{threat models} helps you prioritize,
 build consensus with colleagues,
-and check whether you've forgotten something important.
+and check whether you have forgotten something important.
+As with all disasters,
+making those plans before you need them helps reduce the odds of them being needed,
+as planning may help you identify risks you can eliminate.
 
 \begin{enumerate}
 \item
-  \textbf{Individual threats} are those that affect one or a few members   of your team,
+  \textbf{Individual threats} affect one or a few members of your team,
   such as a foreign student having their visa revoked without notice
   or a contributor taking extended leave.
-  Especially for   software under the maintenance of a single author,
-  individual threats can also come from more mundane career or life changes,
-  when the main developer lacks resources to maintain a project or loses access to it
-  while the software is still valuable to others.
-  The most common way to prepare for this is to require everyone to document their work thoroughly,
+  Especially for software under the maintenance of a single author,
+  individual threats can also come from more mundane career or life changes.
+  The most common way to prepare for this is to require everyone to document their work,
   but that rarely works in practice:
   \begin{enumerate}
   \item
@@ -188,89 +98,69 @@ and check whether you've forgotten something important.
     People invariably fail to write down the ``obvious'' parts of their work
     that are anything but obvious to the next person.
   \end{enumerate}
-  In practice,
-  ``automate what you can and create checklists for what you can't'' seems to be a better approach,
-  particularly if you check those checklists
-  by having someone else try to use them while their authors are still available to take notes and update them.
+  Section~\ref{FIXME} explores alternatives,
+  particularly ones that can be put in place on short notice.
 
 \item
   \textbf{Leadership threats} are individual threats that affect the project's leader,
-  such as the leader being doxxed or targeted personally in the media because of their position.
-  One way to prepare is to have a designated successor
-  (who can also stand in for you if you ever want to take a holiday).
-  Another is to talk with peers about who will inherit what if your project is shut down.
+  such as the leader being doxxed or targeted personally in the media because of their work.
+  Section~\ref{FIXME} discusses ways to plan for this.
 
 \item
-  \textbf{Institutional threats} are those that affect large groups at once,
-  such as your university or professional association shutting down or downsizing
-  due to a natural or human-made disaster.
-  In such events so many people may be affected at the same time that
-  the rest of the community can't absorb them.
-  Regional and national governments handle disasters like these
+  \textbf{Institutional threats} affect large groups at once,
+  such as your department being shut down
+  or your entire field having funding cut.
+  These events affect so many people at the same time
+  that the rest of the community can't absorb them.
+  Regional and national governments plans for disasters like these
   by having evacuation plans to get victims to safe(r) places
   and corollary plans for putting beds in high school gyms
   and flying in food and emergency medical personnel to help people when they arrive.
-  The equivalents in research are
-  to have professional associations lobby governments for changes in visa rules for scientific refugees
-  and for contingency funding to support them.
+  At the time of writing,
+  universities and researchers' professional associations have not started to do the equivalent.
+
 \item
-  \textbf{Global threats} are ones that affect everyone,
+  \textbf{Global threats} affect everyone,
   not just researchers.
-  For example, there is no technical or legal obstacle to the US government
-  requiring American companies to charge a dollar a minute for video conferencing calls
+  For example,
+  there is no technical or legal obstacle to the US government
+  requiring American companies to charge for video conferencing calls
   involving participants outside the United States.
   Similar levies on email,
   file storage,
   and other online services would paradoxically have \emph{less} long-term impact on research
   than the targeted threats described above,
   as they would force national governments to find effective remedies quickly.
-  There are calls for digital sovereignty coming from governments and lobby groups
-  that may also influence where code can and should be stored and shared,
-  including national efforts in
-  \href{https://www.reuters.com/world/europe/dutch-parliament-calls-end-reliance-us-software-2025-03-18/}{the Netherlands},
-  \href{https://www.sovereign.tech/}{Germany},
-  and \href{https://zenodo.org/records/15080979}{New Zealand},
-  the \href{https://www.politico.eu/article/push-for-eurostack-as-eu-us-tech-tensions-grow/}{proposal for a EuroStack},
-  and this \href{https://techcrunch.com/2025/03/16/european-tech-industry-coalition-calls-for-radical-action-on-digital-sovereignty-starting-with-buying-local/}{open letter from the European Tech Industry}.
 
 \end{enumerate}
 
-Figuring out what you're planning for is the first item in our recommendations
-because everything else depends on it.
-As is the case in all disasters,
-making those plans before you need them helps reduce the odds of them being needed,
-as the process may help you identify risks you can eliminate.
+\section*{2. Stay within the law}
 
-\section*{2. Get sign-off on releasing it publicly}
+The short version:
+Ensuring your work remains usable is not worth putting yourself at legal risk.
+Before following any of the tips below,
+make sure you have a legal right to do so.
 
-Some institutions have specific policies for releasing code publicly or licensing it appropriately.
-The first actionable step is to find out what policies your institution follows,
-and whether or not you need sign-off from someone before releasing your code.
-Some institutions will demand that code be released publicly;
-others will prohibit it.
-Demands might also originate from funding agencies
+The long version:
+Most institutions and journals now have policies for licensing code and/or releasing it publicly \cite{Katz2018,Ham2019}.
+Funding agencies at various levels also often have policies
 (e.g.,
 EU\footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en}}
 and NASA\footnote{\url{https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities}})
-or from research journals where you plan to publish the research
-\cite{Katz2018,Ham2019}.
-Find out where your code sits.
+which may or may not align with those of institutions and journals,
+and institutional policies may place restrictions on what you are allowed to say publicly about your situation.
+Our first actionable tip is therefore to find out what those policies are,
+e.g.,
+whether you need explicitly permission to publish your software,
+and if so,
+from whom.
 
-If your institution has a policy regarding open source code,
-get sign-off for your code \emph{now}.
-Contact code reviewers who can review your code if that is necessary for publishing your work.
-If there is no formal sign-off process,
-that means you may be in charge of your code,
-which may make it easier for you to make it publicly available.
-
-If you are unsure,
-you can often find information by asking your direct line manager,
+If you are unsure whether there is a policy or not,
+ask your direct manager,
 the person who pays you,
 or offices like the research office,
-your school office,
 the library,
-the tech transfer office,
-or similar locations.
+or the tech transfer office.
 If your institution has a dedicated
 \href{https://sustainoss.org/academic-map/universities/index.html}{Open Source Program Office} (OSPO),
 ask them
@@ -280,19 +170,30 @@ that advocate for OSPOs.
 If you work with multiple institutions,
 look at your contract and the bilateral agreements around products or deliverables.
 
-Don't assume that if you had permission before,
-you have it now or will have it in the future:
-policies may change,
-and you may be left locked into a policy that doesn't benefit the openness of your code.
-Also consider that the person you report to may change or be removed,
-so it's important to act fast if you're interested in the longevity of your code.
+Once you know whether your institution has a policy on licensing code,
+get whatever sign-offs you need immediately.
+Reach out to colleagues who can review your code if that is necessary for publishing it,
+and review theirs if they ask.
+If it appears that there is no formal sign-off process,
+send an email to someone in authority
+(e.g., the chair of your department or your grant officer)
+saying explicitly that you believe this to be the case,
+and copy that email to an account you will be able to access
+after leaving your institution.
 
-If you have your next job lined up,
-prepare to ask about their policies.
-Work licensing into your contracts,
-and know your rights for any potential outputs.
-Making your code comply with policy at the end of the project is more time-consuming than making these decisions early,
-and sometimes may not be possible.
+Do not assume that if you had permission before,
+you have it now or will have it in the future.
+Policies are changing rapidly,
+and you may find yourself locked into one that no longer allows you to do what you want.
+Also consider that the person you report to may be replaced with one who knows you less well or is less sympathetic,
+so acting now may be easier than acting later.
+
+Finally,
+if you have your next job lined up,
+ask about their policies
+and make sure that your right to share your work is written into your contract.
+Making your code comply with policy after the fact is riskier and more time-consuming than doing so early,
+and sometimes not possible.
 
 \section*{3. Choose an open license}
 
@@ -661,6 +562,10 @@ we recommend that you seek advice from both your and your collaborator's organiz
 
 \section*{10. Write a succession plan}
 
+  One way to prepare is to have a designated successor
+  (who can also stand in for you if you ever want to take a holiday).
+  Another is to talk with peers about who will inherit what if your project is shut down.
+
 All of this work is in the expectation that the code may be used later.
 Even if it isn't,
 you want to leave it in such a state that it could be.
@@ -753,6 +658,13 @@ the library or the research office may also have helpful guides.
 If you learn things, bring them back to the authors of this paper.
 The world is a scary place.
 \cite{Tamburri2020}
+  There are calls for digital sovereignty coming from governments and lobby groups
+  that may also influence where code can and should be stored and shared,
+  including national efforts in
+  \href{https://www.reuters.com/world/europe/dutch-parliament-calls-end-reliance-us-software-2025-03-18/}{the Netherlands},
+  \href{https://www.sovereign.tech/}{Germany},
+  and \href{https://zenodo.org/records/15080979}{New Zealand},
+  the \href{https://www.politico.eu/article/push-for-eurostack-as-eu-us-tech-tensions-grow/}{proposal for a EuroStack}.
 
 \bibliography{code-rules}
 
