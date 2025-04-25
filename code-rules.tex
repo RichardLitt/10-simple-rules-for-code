@@ -197,40 +197,37 @@ and sometimes not possible.
 
 \section*{3. Choose an open license}
 
-Making your code publicly available does not ensure that other people can use it legally:
-without an explicit license,
-you maintain all copyright,
-so most people cannot use your code.
+Making code publicly available does not ensure that other people can use it:
+you maintain all copyright unless you explicitly include a license,
+so they may still need explicit permission
+or may simply be unsure whether they do or not.
+The Open Source Initiative (OSI)
+maintains a list of \href{https://opensource.org/licenses}{open source licenses} it has approved;
+their implications are widely understood,
+so choosing one of those will make your project more understandable to others.
+Please do \emph{not} try to write your own license,
+as it will have the opposite effect.
 
-Use the MIT, Apache 2.0, or BSD-3-Clause license to maximize usability.
-If copyleft is preferred use GPLv3 or AGPL-3.0,
-but be aware that copyleft licenses may limit commercial adoption.
-Copyleft comes with advantages and disadvantages:
-it can protect your open source project and the community around it from exploitation,
-but it can also limit adoption.
-If you need help,
-go to \href{http://choosealicense.com}{choosealicense.com},
-refer to \cite{Furtonato2021},
-or look at institutional policies from institutions similar to your own.
+Broadly speaking,
+the MIT, Apache 2.0, or BSD-3-Clause licenses place the fewest restrictions on re-use.
+The GPLv3 and AGPL-3.0 licenses are \emph{copyleft} licenses
+that require people to share their modifications to the software with the community.
+These licenses can prevent companies from taking advantage of your work without giving anything in return,
+but institutions discourage or disallow the use of copyleft licenses
+out of fear that they will constrain commercialization.
 
-There are licenses that are beyond the scope of
-\href{https://opensource.org/licenses}{open source licenses}
-approved by the Open Source Initiative (OSI)
-that may be useful for your code.
-For instance,
-\href{https://creativecommons.org/}{Creative Commons} licenses can be used for your documentation
-or assets that are attached to your code.
-\href{https://ethicalsource.dev/}{Ethical licenses}
-or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be helpful.
-Choose a license that fits your use case.
-
-Add the \texttt{LICENSE} file to your code,
-most often at the root of your repository.
-This should have the contents of the license.
-This may be more legally binding than just referencing a license in your documentation.
-You may also need to consider copyright laws for countries besides your own if your code is hosted online.
-If you have doubts,
-check with your legal team at your institution.
+More broadly,
+\href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports,
+while \href{https://ethicalsource.dev/}{ethical licenses}
+or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be appropriate.
+For guidance,
+go to \href{http://choosealicense.com}{choosealicense.com}
+or refer to \cite{Fogel2020,Furtonato2021};
+the discussion in \cite{Gomes2022} about why people \emph{don't} share is also helpful.
+Whatever license you choose,
+place its text in a file called \texttt{LICENSE}, \texttt{LICENSE.txt}, or \texttt{LICENSE.md}
+in the root directory of your project,
+as this is where people and automated tools alike will look for it.
 
 \section*{4. Put your code somewhere else}
 
