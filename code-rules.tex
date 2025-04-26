@@ -238,6 +238,20 @@ so you should ensure that loss of institutional support
 (or worse, that institution turning on you)
 does not mean loss of access.
 
+\begin{quote}
+  \noindent
+  \textbf{The Road Not Taken}
+
+  \cite{Langille2010} described a file-sharing system for scientific data
+  based on the BitTorrent protocol.
+  It failed to find wide adoption because of the (quite reasonable) association in many institutions' collective minds
+  between BitTorrent and illegal downloading.
+  At the time of writing,
+  though,
+  many individuals and groups are turning to BitTorrent to share datasets that are at risk of disappearing
+  precisely because of the protocol's resilience.
+\end{quote}
+
 \href{https://github.com/}{GitHub},
 \href{https://gitlab.com}{GitLab},
 and \href{https://bitbucket.org/}{BitBucket}
@@ -324,6 +338,11 @@ A simple way to help people get involved is to label entry-level issues
 (e.g., to use the ``good first issue'' label on GitHub)
 so that people can find a place to start \cite{Steinmacher2015}.
 
+If you haven't named your project yet,
+choose a name that doesn't hint at direct and exclusive affiliation to a single institution.
+This can help if the code needs to be relocated,
+and also makes contributors from other institutions feel welcome.
+
 Announcing your project on mailing lists, forums, or social media,
 and talking about it at conferences are necessary but not sufficient:
 everyone else is doing this too,
@@ -366,195 +385,128 @@ a letter of reference,
 help testing or documenting their project,
 or co-authorship credit on the project and associated publications.
 
-\section*{6. Manage the project properly (if you have time)}\label{s:properly}
+\section*{6. Do what you're supposed to (if you have time)}\label{s:properly}
 
-FIXME: consolidate all this material as ``do what we've been telling you to do all along''.
+Research software is increasingly recognized as a citable object \cite{Smith2016,Katz2021,Garijo2024},
+and numerous books and papers describe how to organize and run a research software project.
+Rather than repeating what is in
+\cite{Sandve2013,Wilson2014,Lee2018a,Dryden2019,Akhmerov2020,Chue2021,Lees2022,Druskat2023,Akhmerov2023,Kumar2023,Struck2023,Reina2024},
+our sixth tip is a prioritized checklist of things to do
+\emph{if you have time}.
+If you do not,
+please consult the next tip.
 
-FIXME: do this for credit as well as to be able to keep using the software.
-Code is increasingly cited by researchers \cite{Smith2016,Katz2021,Garijo2024}
-and recognized as a research object in its own right.
+\begin{enumerate}
 
-Create a DOI for each release of your software
-to ensure citability and retrievability even if the project repository becomes unavailable.
-As noted in the previous tip,
-Zenodo can do this automatically if your project is hosted on GitHub,
-but you can do it manually if you are hosting your project elsewhere.
+\item
+  Create a DOI for each release of your software
+  to ensure citability and retrievability even if the project repository becomes unavailable,
+  and add a \href{https://citation-file-format.github.io/}{Citation.CFF}
+  or \href{https://codemeta.github.io}{codemeta.json} file to your code \cite{Druskat2021}
+  containing citation metadata.
+  Tools such as \href{https://citation-file-format.github.io/cff-initializer-javascript/}{cffinit}
+  \href{https://codemeta.github.io/codemeta-generator/}{codemeta generator},
+  and \href{https://github.com/citation-file-format/citation-file-format/blob/main/README.md\#tools-to-work-with-citationcff-files-wrench}{others}
+  can help you do this.
 
-Add a \href{https://citation-file-format.github.io/}{Citation.CFF}
-or \href{https://codemeta.github.io}{codemeta.json} file to your code \cite{Druskat2021}.
-The format captures the metadata associated with the software in the repository,
-which in turn helps to ensure that it is citable by making it easy for others to do so.
-This will enable you to get credit down the road without much effort,
-especially as some generators and tools
-such as \href{https://citation-file-format.github.io/cff-initializer-javascript/}{cffinit},
-\href{https://codemeta.github.io/codemeta-generator/}{codemeta generator},
-and \href{https://github.com/citation-file-format/citation-file-format/blob/main/README.md\#tools-to-work-with-citationcff-files-wrench}{others} exist.
+\item
+  Have your code peer-reviewed and published in a venue such as
+  the \href{https://joss.theoj.org/}{Journal of Open Source Software},
+  the \href{https://openresearchsoftware.metajnl.com/}{Journal of Open Research Software},
+  the \href{http://www.jstatsoft.org}{Journal of Statistical Software},
+  the \href{https://journal.r-project.org/}{R Journa},
+  or \href{https://ropensci.org/}{rOpenSci}.
 
-If you have the time,
-consider having your code peer-reviewed and published.
-There are now many places where you can do this,
-including the \href{https://joss.theoj.org/}{Journal of Open Source Software},
-the \href{https://openresearchsoftware.metajnl.com/}{Journal of Open Research Software},
-the \href{http://www.jstatsoft.org}{Journal of Statistical Software},
-the \href{https://journal.r-project.org/}{R Journa}l
-and \href{https://ropensci.org/}{rOpenSci}.
-Make sure to reference any code,
-including your own,
-in any papers that use it.
+\item
+  Document how to \emph{use} your software so that others can pick it up and use it if you are not available.
+  In particular,
+  add a \texttt{README.md} at the root of your repository
+  that explains the purpose, setup, and use of your work,
+  and add a tutorial showing how to use the major components of the code
+  \cite{Lee2018b,Huybrechts2024,Littauer2025,Katz2025,Turing2025}.
 
-Another option is publishing your normal work,
-but including your code with that work.
-Submitting your software as a part of the supplementary material of a journal article that uses it
-not only improves the reproducibility of your analyses
-but also acts as a snapshot backup of your software on the publisher's website.
+\item
+  Document any datasets your project depends on,
+  and use CSV, JSON, Parquet, HDF5, or other widely-recognized formats rather than proprietary formats.
+  Include the data in your project if possible;
+  if that is not possible for legal reasons or because of the data's size,
+  include URLs with data version IDs (or the date of the last download) in your documentation.
 
-There is work underway to create types of persistent identifiers for research software,
-such as \href{https://interoperable-europe.ec.europa.eu/collection/open-source-observatory-osor/news/swhid-intrinsic-identifier-software-artefacts}{Software Heritage's work on SWHIDs}
-or \href{https://arxiv.org/abs/2501.10415}{this proposal},
-but it is still nascent.
+\item
+  Describe your project's dependencies in a machine-readable way
+  using Python's \href{https://packaging.python.org/en/latest/guides/writing-pyproject-toml/}{pyproject.toml} file,
+  an npm \href{https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true}{package.json} file,
+  the \texttt{DESCRIPTION} and \texttt{NAMESPACE} files of an R package,
+  or whatever else is standard for your language.
 
-Your code is only as useful as the use others can make of it.
-Document it as much as is necessary for others to be able to pick it up and use it as intended.
-Don't go overboard:
-if you're reading this,
-you don't have time to document every method.
+\item
+  Write at least a few tests for your software
+  so that people who want to use it (or contribute to it)
+  can tell if it's working in their environment.
+  These do not have to be formal unit tests \cite{Irving2021}:
+  as \cite{Taschuk2017} explains,
+  even a handful of ``this input should produce this output'' checks
+  can save a lot of frustration.
 
-In particular,
-add a \texttt{README.md} at the root of your repository
-that explains the purpose, setup, and usage of your work.
-If you can,
-add a tutorial or an explanation for how to use the major functions of the code.
-Adding a minimal example that shows how to use it makes it easier for others to get started.
-If it is a component or a library,
-try showing how to integrate it into existing systems.
-Consider sharing a screen recording of you using your code.
-Instructions on how to build,
-launch, test, or deploy it are also valuable,
-but a README is the first step.
-There are guides on writing documentation that may help
-\cite{Huybrechts2024,Littauer2025,Katz2025,Turing2025}.
+\item
+  Document how to \emph{contribute} to your software,
+  e.g.,
+  how to set up a development environment,
+  run tests,
+  and add new features.
+  Such a guide leads to an increase in contributions \cite{Sholler2019},
+  as does an explanation of the project's governance,
+  i.e.,
+  how decisions are made and who gets a voice in making them.
 
-If you can, make the link to documentation easy to find, or available at a canonical URL.
-Bundling and archiving documentation together with the code would also help.
+\end{enumerate}
 
-A contributor's guide that explains how to set up a development environment,
-how to add tests,
-and how to become part of the project's team can be extremely helpful.
-Having one of these also leads to an increase in contributions \cite{Sholler2019}.
-Your project is more than just your code:
-it is your governance,
-your issue tracker and changelogs,
-and your shared values.
-If you can, write these down.
+\section*{7. Do what you can (if you have to act quickly)}\label{s:quickly}
 
-If you haven't named your code yet,
-consider naming it in an inclusive way
-without hinting at direct and exclusive affiliation to a single institution.
-This can help if the code needs to be relocated,
-but also in herding developers from other institutions to contribute.
+A paramedic is not a doctor who cuts corners,
+but rather someone who has been trained to work subject to very different constraints.
+\cite{Wilson2017} provides some guidance for ``good enough'' practices in research computing;
+other tips in this paper are in this vein,
+such as creating \texttt{.zip} archives of your project as an alternative to using version control.
+A few others include:
 
-There are many other steps that are possible for documenting your code \cite{Lee2018}.
-It is worth repeating that you do not need to go overboard.
-Documentation is never finished,
-and documentation is an art,
-not a checklist to be filled out.
+\begin{enumerate}
 
-Code can only deliver its full value if it can be re-executed.
-Reproducibility is an essential part of making your code last.
-We touched on this above with the call to document your code.
-Documenting the code includes describing dependencies in a machine-readable way,
-e.g., Python's \href{https://packaging.python.org/en/latest/guides/writing-pyproject-toml/}{pyproject.toml} file,
-an npm \href{https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true}{package.json} file,
-or equivalent manifests.
-When referencing code in your docs or manifests,
-ensure that a version label is included
-so that future users have a way to identify the proper version.
-Versioning also helps in discerning and identifying portions of the code contributed under different affiliations.
+\item
+  Explanations of what the software does and how to use it
+  take priority over documentation of its internals
+  because (a) someone who knows the former will be better able to figure out the latter
+  and (b) AI code assistants can do a reasonable job of helping newcomers navigate an unfamiliar code base
+  if they are given enough context.
 
-Making your code independently executable with consistent outcomes
-is more than just documenting what it needs to run.
-It involves abstracting the code,
-thinking about how it is used,
-and then refactoring it to ensure that it is easier for the next person.
-It also involves considering all of the steps necessary for your code to run.
-That may also mean adding instructions on how to make code run on other machines under different environments.
-If you have access to other machines,
-you can attempt to run your code on them
-and document the process as you go.
-Providing instructions on how to reproduce your results in the cloud
-enables reviewers and followers of your work to skip time-consuming environment setup
-and dive straight into running the code.
-If you use Jupyter notebooks for your work \cite{Perkel2018}
-and host them in public repositories,
-enabling their execution in the cloud can be reduced to a single URL-click
-with platforms such as \href{http://mybinder.org}{mybinder.org}
-or analogous proprietary solutions such as Google Colab
-or \href{https://github.com/features/codespaces}{Github Codespaces}.
+\item
+  Similarly,
+  a short screencast showing how you use your software
+  is often faster to create than pages of documentation,
+  and may actually be more useful provided provided closed captions are attached
+  to make the content searchable.
+  (Again,
+  AI tools can help create those captions,
+  though some editing is invariably required to clean up mis-translation of technical jargon.)
 
-If you can, version your runtime environment.
-Use tools like Docker, Podman, renv, conda, or rix to make clear
-what anyone else would need to set up
-to make sure the code is being reproduced in the same computational environment.
+\end{enumerate}
 
-Try and prevent avoidable hardware or software vendor lock-in
-that might limit usability of code by another institution.
-If your code or the process you use to work on it
-depends upon access to platforms that you may not keep,
-see if you can find alternatives.
-For instance,
-look into simulation solutions on
-\href{https://www.softwarepreservationnetwork.org/emulation-as-a-service-infrastructure/}{EaaSI}).
-Some proprietary software solutions do have open source alternatives,
-and it is worth documenting if and how one may leverage them to run your code.
-When developing code for specific hardware such GPUs,
-it is worth exploring frameworks that enable the same code to execute---albeit
-with reduced performance---on standard commodity hardware.
-Finally,
-work with common tools if you can.
-They'll make adoption easier,
-as they're generally more portable than obscure projects.
-
-Data and code live within a shared context.
-As previously mentioned, there are other resources for making your data available.
-Data that is necessary to run or reproduce your code should be made publicly available when possible.
-In order for accessible data to be useful,
-you may need to do some work with your code to ensure that others can use it.
-
-Document your datasets and include metadata describing the data.
-Even if you need to exclude sensitive data,
-you may be able to provide a safe synthetic dataset,
-or include metadata describing the data so that someone else could reasonably do so.
-
-If your code references specific datasets or formats,
-try to link to them in your documentation.
-If your code was used in any publications,
-you can list those publications in your documentation, too.
-
-Avoiding proprietary formats for your data will help make your code more relevant.
-Use CSV, JSON or other types of machine-readable data.
-PDFs lock in the data and are difficult to mine.
-Other formats are preferable for most data.
-Adjust your code accordingly.
-
-If you can, document analysis pipelines using Jupyter Notebooks,
-R Markdown,
-or any standard documentation.
-Provide Makefiles or other workflows to automate data processing.
-Ultimately,
-others may have to make new data to work with your code if yours is not used for a significant period of time.
-Ensuring that those who follow you---including your future self---can do so
-will help extend the reach and impact of your code.
-
-\section*{7. Cut corners if you have to act quickly}\label{s:quickly}
-
-FIXME: paramedics don't do what doctors do,
-so go through all of the points listed above and propose hurry-up alternatives.
+FIXME: add more points
 
 \section*{8. Write a succession plan}\label{s:succession}
 
-  One way to prepare is to have a designated successor
-  (who can also stand in for you if you ever want to take a holiday).
-  Another is to talk with peers about who will inherit what if your project is shut down.
+There are thousands of books in print about how to start a business,
+but only a handful describe how to hand one over or wind one down,
+and most of those focus on succession within family-owned businesses.
+Guides to running a laboratory such as \cite{Barker2010,Cohen2018} offer slightly more coverage,
+but this remains a topic where knowledge is passed on person-to-person
+if it is passed on at all.
+
+FIXME: rewrite this section
+
+One way to prepare is to have a designated successor
+(who can also stand in for you if you ever want to take a holiday).
+Another is to talk with peers about who will inherit what if your project is shut down.
 
 All of this work is in the expectation that the code may be used later.
 Even if it isn't,
