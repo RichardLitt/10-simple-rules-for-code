@@ -23,7 +23,7 @@ FIXME
 
 \linenumbers
 
-\section*{Introduction}
+\section*{Introduction}\label{s:intro}
 
 Academic life is often precarious,
 particularly for those who work on research software,
@@ -31,7 +31,7 @@ an asset that is essential to modern research \cite{Pearson2025}
 but often underfunded, undercited, and overlooked \cite{Carver2022}.
 The situation has recently worsened dramatically due to changes in the political climate:
 researchers in all disciplines face the loss of funding or jobs,
-a smaller pool of incoming students \cite{Mallapaty2025},
+a smaller pool of incoming students,
 and institutional policies that prioritize commercial returns.
 Researchers in non-academic organizations
 such as government labs, non-governmental organizations (NGOs), and non-profits are also impacted \cite{Woodward2025}
@@ -43,7 +43,7 @@ Code should outlast situations the author changing workplaces or careers,
 partnernships failing,
 a lab closing down,
 or tooling and digital infrastructure becoming unavailable.
-We therefore present FIXME tips to ensure your software remains accessible and usable by others
+We therefore present ten tips to ensure your software remains accessible and usable by others
 even if you are no longer able to work on it.
 You do not need to adopt all of them to make things better;
 instead,
@@ -71,7 +71,7 @@ our recommendations
 are part of the global push for more equitable assessment of research contributions
 by initiatives like \href{https://sfdora.org/}{DORA}, \href{https://coara.eu/}{coARA}, and \href{https://adore.software/}{ADORE.software}.
 
-\section*{1. Consider your threat model}
+\section*{1. Consider your threat model}\label{s:threat-model}
 
 When making plans, it's useful to know what you're planning \emph{for}.
 Being explicit about \textbf{threat models} helps you prioritize,
@@ -98,13 +98,13 @@ as planning may help you identify risks you can eliminate.
     People invariably fail to write down the ``obvious'' parts of their work
     that are anything but obvious to the next person.
   \end{enumerate}
-  Section~\ref{FIXME} explores alternatives,
+  Section~\ref{s:quickly} explores alternatives,
   particularly ones that can be put in place on short notice.
 
 \item
   \textbf{Leadership threats} are individual threats that affect the project's leader,
   such as the leader being doxxed or targeted personally in the media because of their work.
-  Section~\ref{FIXME} discusses ways to plan for this.
+  Section~\ref{s:succession} discusses ways to plan for this.
 
 \item
   \textbf{Institutional threats} affect large groups at once,
@@ -134,7 +134,7 @@ as planning may help you identify risks you can eliminate.
 
 \end{enumerate}
 
-\section*{2. Stay within the law}
+\section*{2. Stay within the law}\label{s:legal}
 
 The short version:
 Ensuring your work remains usable is not worth putting yourself at legal risk.
@@ -195,7 +195,7 @@ and make sure that your right to share your work is written into your contract.
 Making your code comply with policy after the fact is riskier and more time-consuming than doing so early,
 and sometimes not possible.
 
-\section*{3. Choose an open license}
+\section*{3. Choose an open license}\label{s:license}
 
 Making code publicly available does not ensure that other people can use it:
 you maintain all copyright unless you explicitly include a license,
@@ -211,7 +211,7 @@ as it will have the opposite effect.
 Broadly speaking,
 the MIT, Apache 2.0, or BSD-3-Clause licenses place the fewest restrictions on re-use.
 The GPLv3 and AGPL-3.0 licenses are \emph{copyleft} licenses
-that require people to share their modifications to the software with the community.
+that require people to share their modifications to the software with the community \cite{Morin2012}.
 These licenses can prevent companies from taking advantage of your work without giving anything in return,
 but institutions discourage or disallow the use of copyleft licenses
 out of fear that they will constrain commercialization.
@@ -222,14 +222,14 @@ while \href{https://ethicalsource.dev/}{ethical licenses}
 or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be appropriate.
 For guidance,
 go to \href{http://choosealicense.com}{choosealicense.com}
-or refer to \cite{Fogel2020,Furtonato2021};
+or refer to \cite{Fogel2020,Fortunato2021};
 the discussion in \cite{Gomes2022} about why people \emph{don't} share is also helpful.
 Whatever license you choose,
 place its text in a file called \texttt{LICENSE}, \texttt{LICENSE.txt}, or \texttt{LICENSE.md}
 in the root directory of your project,
 as this is where people and automated tools alike will look for it.
 
-\section*{4. Save everything in multiple places}
+\section*{4. Save everything in multiple places}\label{s:lockss}
 
 Now that you're legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.
 But copies are not enough:
@@ -255,7 +255,7 @@ consider mirroring your work there or using it as your primary host.
 When you create projects on hosted services,
 use a team account as the project owner rather than a personal account.
 Doing this makes it easier to give other people permission to manage the project,
-and as noted in \ref{FIXME},
+and as noted in Section~\ref{s:community},
 a project with multiple owners from different institutions
 is harder for any one institution to lock down.
 For the same reason,
@@ -314,7 +314,7 @@ or \href{https://cran.r-project.org/}{CRAN},
 that package can contain all of the source code.
 Doing this also fosters community collaboration
 
-\section*{5. Encourage community adoption}
+\section*{5. Encourage community adoption}\label{s:community}
 
 Publishing your code is not the same as publicizing it.
 the more people who know about and rely on your project,
@@ -322,7 +322,7 @@ the greater the odds that someone will help keep it alive,
 whether by working on directly or supporting you to do so.
 A simple way to help people get involved is to label entry-level issues
 (e.g., to use the ``good first issue'' label on GitHub)
-so that people can find a place to start \cite{SteinmacherXXXX}.
+so that people can find a place to start \cite{Steinmacher2015}.
 
 Announcing your project on mailing lists, forums, or social media,
 and talking about it at conferences are necessary but not sufficient:
@@ -366,7 +366,7 @@ a letter of reference,
 help testing or documenting their project,
 or co-authorship credit on the project and associated publications.
 
-\section*{6. Manage the project properly (if you have time)}
+\section*{6. Manage the project properly (if you have time)}\label{s:properly}
 
 FIXME: consolidate all this material as ``do what we've been telling you to do all along''.
 
@@ -545,12 +545,12 @@ others may have to make new data to work with your code if yours is not used for
 Ensuring that those who follow you---including your future self---can do so
 will help extend the reach and impact of your code.
 
-\section*{7. Cut corners if you have to act quickly}
+\section*{7. Cut corners if you have to act quickly}\label{s:quickly}
 
 FIXME: paramedics don't do what doctors do,
 so go through all of the points listed above and propose hurry-up alternatives.
 
-\section*{8. Write a succession plan}
+\section*{8. Write a succession plan}\label{s:succession}
 
   One way to prepare is to have a designated successor
   (who can also stand in for you if you ever want to take a holiday).
@@ -615,7 +615,7 @@ If you don't have a successor designated,
 it still helps to write up a document explaining where the keys are,
 and how to use them.
 
-\section*{9. Talk about what you're doing}
+\section*{9. Talk about what you're doing}\label{s:talk}
 
 All of this work is labor.
 You'll learn that not all of these steps apply to you,
@@ -643,7 +643,7 @@ ask them to help with this process.
 If not,
 the library or the research office may also have helpful guides.
 
-\section*{10. Organize.}
+\section*{10. Organize.}\label{s:organize}
 
 FIXME:
 There's no point sharing what you have learned from the current disaster
@@ -651,7 +651,7 @@ if you don't use that knowledge to prevent or mitigate the next one.
 None of us can fix this on our own;
 become active in your professional society and/or advocacy groups.
 
-\section*{Conclusion}
+\section*{Conclusion}\label{s:finale}
 
 If you learn things, bring them back to the authors of this paper.
 The world is a scary place.
