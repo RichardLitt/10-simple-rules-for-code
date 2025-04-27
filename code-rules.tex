@@ -15,11 +15,9 @@
 
 \section*{Abstract}
 
-FIXME
-
-\section*{Author summary}
-
-FIXME
+We present ten tips to help researchers ensure that
+the software they have built will continue to be usable
+after they have left their present job.
 
 \linenumbers
 
@@ -40,7 +38,7 @@ and associated public funding redirected or cut entirely \cite{Nature2025}.
 
 In this environment it is essential that research software projects be \emph{resilient}.
 Code should outlast situations the author changing workplaces or careers,
-partnernships failing,
+partnerships failing,
 a lab closing down,
 or tooling and digital infrastructure becoming unavailable.
 We therefore present ten tips to ensure your software remains accessible and usable by others
@@ -69,9 +67,11 @@ and to reproduce and cite your work.
 As such,
 our recommendations
 are part of the global push for more equitable assessment of research contributions
-by initiatives like \href{https://sfdora.org/}{DORA}, \href{https://coara.eu/}{coARA}, and \href{https://adore.software/}{ADORE.software}.
+by initiatives like \href{https://sfdora.org/}{DORA},
+\href{https://coara.eu/}{coARA},
+and \href{https://adore.software/}{ADORE.software}.
 
-\section*{1. Consider your threat model}
+\section*{Tip 1: Consider your threat model}
 
 When making plans, it's useful to know what you're planning \emph{for}.
 Being explicit about \textbf{threat models} helps you prioritize,
@@ -98,13 +98,13 @@ as planning may help you identify risks you can eliminate.
     People invariably fail to write down the ``obvious'' parts of their work
     that are anything but obvious to the next person.
   \end{enumerate}
-  Tip~7 explores alternatives,
+  Tip~8 explores alternatives,
   particularly ones that can be put in place on short notice.
 
 \item
   \textbf{Leadership threats} are individual threats that affect the project's leader,
   such as the leader being doxxed or targeted personally in the media because of their work.
-  Tip~8 discusses ways to plan for this.
+  Tip~3 discusses ways to plan for this.
 
 \item
   \textbf{Institutional threats} affect large groups at once,
@@ -134,14 +134,11 @@ as planning may help you identify risks you can eliminate.
 
 \end{enumerate}
 
-\section*{2. Stay within the law}
+\section*{Tip 2: Stay within the law}
 
-The short version:
 Ensuring your work remains usable is not worth putting yourself at legal risk.
 Before following any of the tips below,
 make sure you have a legal right to do so.
-
-The long version:
 Most institutions and journals now have policies for licensing code and/or releasing it publicly \cite{Katz2018,Ham2019}.
 Funding agencies at various levels also often have policies
 (e.g.,
@@ -195,7 +192,60 @@ and make sure that your right to share your work is written into your contract.
 Making your code comply with policy after the fact is riskier and more time-consuming than doing so early,
 and sometimes not possible.
 
-\section*{3. Choose an open license}
+\section*{Tip 3: Decide if you are ending, pausing, and passing on}
+
+There are thousands of books in print about how to start a business,
+but only a handful describe how to hand one over or wind one down,
+and most of those focus on succession within family-owned businesses.
+Guides to running a laboratory such as \cite{Barker2010,Cohen2018} say little more,
+so such wisdom as we have is passed on person-to-person if it is passed on at all.
+
+The first step is to decide if work on the project is ending,
+being suspended temporarily (for some version of ``temporarily''),
+or if you are handing it on to someone else.
+If the project is ending or going on hiatus,
+focus on making what you have accomplished findable and citable
+as discussed in the tips that follow.
+To help you prioritize,
+write up the goals you initially had for this project
+and ask how well they were served by what you actually did.
+Doing this may actually help you realize that the project doesn't have to end,
+but can instead be folded into someone else's work,
+even if you are no longer involved.
+
+If instead you hope to hand the project on to someone else,
+you can either choose a successor
+(who will typically be someone already working on the project)
+or ask your peers for volunteers or recommendations.
+Writing a \emph{succession plan} that describes what the work will actually entail
+will help in both cases.
+What will your successor have to learn and do during the transition?
+What will they be responsible for once they are in charge?
+And crucially,
+how much work is running the project actually going to be?
+Please be honest rather than optimistic:
+finding out after you have agreed to take something on
+that it is much larger than you realized
+can strain both professional and personal relationships.
+
+If the project is large,
+and you have enough time,
+consider working with a fiscal sponsor such as
+\href{https://numfocus.org/}{NumFOCUS},
+\href{https://sfconservancy.org/}{Software Freedom Conservancy},
+\href{https://www.eclipse.org/}{the Eclipse Foundation},
+the \href{https://oscollective.org/}{Open Source Collective},
+or other \href{https://sustainoss.org/academic-map/organizations/index.html}{foundations and fiscal hosts}.
+Through fiscal hosting,
+your project can take donations from its community to fund continued maintenance and other costs.
+Universities and governments are generally poorly suited for this due to high overheads and procurement costs;
+fiscal sponsors may take an order of magnitude less.
+In addition,
+a fiscal sponsor puts the software in a neutral home
+where it is no longer owned by a single research organization,
+which helps insulate it from shifts in policy.
+
+\section*{Tip 4: Choose an open license}
 
 Making code publicly available does not ensure that other people can use it:
 you maintain all copyright unless you explicitly include a license,
@@ -229,7 +279,7 @@ place its text in a file called \texttt{LICENSE}, \texttt{LICENSE.txt}, or \text
 in the root directory of your project,
 as this is where people and automated tools alike will look for it.
 
-\section*{4. Save everything in multiple places}
+\section*{Tip 5: Save everything in multiple places}
 
 Now that you're legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.
 But copies are not enough:
@@ -261,6 +311,7 @@ However,
 they are all commercial entities based in the same legal jurisdiction,
 which means they are vulnerable to \emph{correlated threats}:
 trouble with any of them may mean trouble with all of them.
+(\cite{Tamburri2020} is a sobering account of what can happen when key infrastructure comes under threat.)
 \href{https://codeberg.org/}{Codeberg},
 while currently much smaller,
 is a non-profit based in a different jurisdiction;
@@ -269,7 +320,7 @@ consider mirroring your work there or using it as your primary host.
 When you create projects on hosted services,
 use a team account as the project owner rather than a personal account.
 Doing this makes it easier to give other people permission to manage the project,
-and as noted in Tip~5,
+and as noted in Tip~6,
 a project with multiple owners from different institutions
 is harder for any one institution to lock down.
 For the same reason,
@@ -328,7 +379,7 @@ or \href{https://cran.r-project.org/}{CRAN},
 that package can contain all of the source code.
 Doing this also fosters community collaboration
 
-\section*{5. Encourage community adoption}
+\section*{Tip 6: Encourage community adoption}
 
 Publishing your code is not the same as publicizing it.
 the more people who know about and rely on your project,
@@ -385,7 +436,7 @@ a letter of reference,
 help testing or documenting their project,
 or co-authorship credit on the project and associated publications.
 
-\section*{6. Do what you're supposed to (if you have time)}
+\section*{Tip 7: Do what you're supposed to (if you have time)}
 
 Research software is increasingly recognized as a citable object \cite{Smith2016,Katz2021,Garijo2024},
 and numerous books and papers describe how to organize and run a research software project.
@@ -414,7 +465,7 @@ please consult the next tip.
   the \href{https://joss.theoj.org/}{Journal of Open Source Software},
   the \href{https://openresearchsoftware.metajnl.com/}{Journal of Open Research Software},
   the \href{http://www.jstatsoft.org}{Journal of Statistical Software},
-  the \href{https://journal.r-project.org/}{R Journa},
+  the \href{https://journal.r-project.org/}{R Journal},
   or \href{https://ropensci.org/}{rOpenSci}.
 
 \item
@@ -461,7 +512,7 @@ please consult the next tip.
 
 \end{enumerate}
 
-\section*{7. Do what you can (if you have to act quickly)}
+\section*{Tip 8: Do what you can (if you have to act quickly)}
 
 A paramedic is not a doctor who cuts corners,
 but rather someone who has been trained to work subject to very different constraints.
@@ -485,136 +536,68 @@ A few others include:
   is often faster to create than pages of documentation,
   and may actually be more useful provided provided closed captions are attached
   to make the content searchable.
-  (Again,
+  Again,
   AI tools can help create those captions,
-  though some editing is invariably required to clean up mis-translation of technical jargon.)
+  though some editing is invariably required to clean up mistranslation of technical jargon.
+
+\item
+  If you do not have time to bring your project in line with best practices,
+  try instead to clean it up by removing files that are no longer used,
+  deleting sections of your setup instructions that no longer apply,
+  closing bug reports that are no longer relevant,
+  and so on.
+  Eliminating clutter in this way will make what's useful easier to find.
 
 \end{enumerate}
 
-FIXME: add more points
+\section*{Tip 9: Talk about what you're doing}
 
-\section*{8. Write a succession plan}
+All of the work we have described is extra labor.
+You won't want to do it,
+particularly not when so many other things demand attention as well.
+Make that work meaningful by helping others.
+Tell your colleagues what you have learned about your institution's legal requirements,
+about navigating its bureaucracy,
+and about the least hurtful way to break the news to your students, collaborators, and users.
+Share your own tips on social media
+(preferably Mastodon rather than X or Bluesky,
+as the latter two are single points of institutional failure),
+and share things that \emph{haven't} worked as well
+so that other people can avoid stepping on the same landmines.
 
-There are thousands of books in print about how to start a business,
-but only a handful describe how to hand one over or wind one down,
-and most of those focus on succession within family-owned businesses.
-Guides to running a laboratory such as \cite{Barker2010,Cohen2018} offer slightly more coverage,
-but this remains a topic where knowledge is passed on person-to-person
-if it is passed on at all.
+Most importantly,
+take the time to grieve.
+Having years of work come to an abrupt end will take a toll on your mental health;
+many of your colleagues will be suffering as well,
+and those who haven't been hit (yet) may be affected by survivors' guilt.
+Be angry,
+be sad,
+but remember that in the aftermath of a disaster---natural or man-made---people
+often become altruistic, resourceful, and brave.
 
-FIXME: rewrite this section
+\section*{Tip 10: Organize.}
 
-One way to prepare is to have a designated successor
-(who can also stand in for you if you ever want to take a holiday).
-Another is to talk with peers about who will inherit what if your project is shut down.
+There is little point surviving today's flood if you drown in tomorrow's.
+The best strategy is to take preventive action,
+and the best way to do that in a research context
+is to become active in professional associations
+and push them to take meaningful action.
 
-All of this work is in the expectation that the code may be used later.
-Even if it isn't,
-you want to leave it in such a state that it could be.
-A succession plan can be used to suss out how others can take over;
-a sunsetting plan can be used as a framework for how to mothball the code permanently.
-Writing either plan will help you know what you're going to do to ensure that the code,
-data,
-and project are bundled up and put away nicely.
+Many readers of this paper will find the thought of doing this uncomfortable.
+As \cite{Putnam2020} points out,
+voluntary organizations have seen a slow but steady decline in membership over several decades.
+While there are many contributing factors,
+the net result is that professionals aged 30--60
+are less likely to be involved in civil society and the political process than the generation before them.
+This disengagement effectively hands power to extremists and special interest groups
+and enables them to seize control of civil institutions in order to advance their agendas \cite{BuenoDeMesquita2022}.
+To see the impact,
+ask yourself who is more likely to run for a seat on your local school board:
+a professor of epidemiology or an anti-vax conspiracy theorist?
 
-This is also useful because this process can have a deliverable in itself:
-a statement of how the project was used and what you accomplished with it.
-Write up the story of the project.
-Share it widely.
-This will make it easier to wind your project down
-while also recognizing that all projects eventually end.
-
-Write up the goals you initially had for this project
-and ask if they were served by the project and whether you succeeded.
-Sometimes,
-it may make sense to fold a project into another one,
-or to ask someone else to take it over.
-The process of writing up a sunsetting plan can involve realizing that
-the project doesn't need to end,
-but your continued involvement may not serve the project.
-Think about whether someone else could be trained to use it,
-or take up leadership for it,
-or fund work on it.
-
-For some projects,
-it may be worth working with a fiscal sponsor such as
-\href{https://numfocus.org/}{NumFOCUS},
-\href{https://sfconservancy.org/}{Software Freedom Conservancy},
-\href{https://www.eclipse.org/}{the Eclipse Foundation},
-or \href{https://oscollective.org/}{Open Source Collective}.
-There are \href{https://sustainoss.org/academic-map/organizations/index.html}{many foundations and fiscal hosts}.
-Through fiscal hosting,
-your project can take donations from its community of users to fund continued maintenance or other project costs.
-Universities or governments are generally not ideal fiscal hosts for software projects,
-due to high overhead costs and procurement processes.
-Smaller hosts like Open Source Collective take a minimal overhead in comparison,
-often an order of magnitude less.
-Some fiscal hosts are more hands on,
-and may help offload much of the work of keeping your code going.
-A key part of using a fiscal host is that
-they put the software in a neutral home where it is no longer owned by a research performing organization.
-This is based on the sponsor owning the intellectual property.
-This also lets people become owners of the project over time
-without having to move to a single institution.
-
-Before you go,
-remember to empower at least one other person to act on behalf of the project.
-If you use GitHub,
-consider designating a
-\href{https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/maintaining-ownership-continuity-of-your-personal-accounts-repositories}{successor account}
-that can administer your repositories if you can no longer access or control them.
-If you don't have a successor designated,
-it still helps to write up a document explaining where the keys are,
-and how to use them.
-
-\section*{9. Talk about what you're doing}
-
-All of this work is labor.
-You'll learn that not all of these steps apply to you,
-and you'll find other steps that could also be useful.
-Further, you may not want to do any of this, and it may feel like pulling teeth.
-
-Make that work meaningful.
-Talk about how hard it is to archive working code.
-Talk about how necessary the code you've written is.
-Talk about how others should protect and harden their systems.
-
-You can also use this process to find more contributors,
-or get others to hold it for you,
-or to get sign off.
-This may help your project live longer and help others use it.
-
-Use Mastodon to find other archives that will be able to host your code in the future.
-These steps will help ensure your work remains accessible and usable,
-regardless of your employment situation.
-
-Your institution may be able to help you,
-with advance notice.
-If your institution has an OSPO,
-ask them to help with this process.
-If not,
-the library or the research office may also have helpful guides.
-
-\section*{10. Organize.}\label{s:organize}
-
-FIXME:
-There's no point sharing what you have learned from the current disaster
-if you don't use that knowledge to prevent or mitigate the next one.
-None of us can fix this on our own;
-become active in your professional society and/or advocacy groups.
-
-\section*{Conclusion}\label{s:finale}
-
-If you learn things, bring them back to the authors of this paper.
-The world is a scary place.
-\cite{Tamburri2020}
-  There are calls for digital sovereignty coming from governments and lobby groups
-  that may also influence where code can and should be stored and shared,
-  including national efforts in
-  \href{https://www.reuters.com/world/europe/dutch-parliament-calls-end-reliance-us-software-2025-03-18/}{the Netherlands},
-  \href{https://www.sovereign.tech/}{Germany},
-  and \href{https://zenodo.org/records/15080979}{New Zealand},
-  the \href{https://www.politico.eu/article/push-for-eurostack-as-eu-us-tech-tensions-grow/}{proposal for a EuroStack}.
+We have written this paper because we believe scientific inquiry is a public good and worth fighting for.
+The present climate requires us to focus on preserving what we can,
+but playing defense is just a way to lose more slowly.
 
 \bibliography{code-rules}
 
