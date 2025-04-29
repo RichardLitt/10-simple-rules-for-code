@@ -4,18 +4,24 @@ STEM=code-rules
 
 all : commands
 
-## commands   : show all commands.
+## commands : show all commands.
 commands :
-	@grep -E '^##' Makefile | sed -e 's/## //g'
+	@grep -h -E '^##' ${MAKEFILE_LIST} \
+	| sed -e 's/## //g' \
+	| column -t -s ':'
 
-## pdf        : re-generate PDF
+## pdf : re-generate PDF
 pdf :
 	${LATEX} ${STEM}
 	${BIBTEX} ${STEM}
 	${LATEX} ${STEM}
 	${LATEX} ${STEM}
 
-## clean      : clean up junk files.
+## spell: check spelling
+spell:
+	aspell --mode tex check code-rules.tex
+
+## clean : clean up junk files.
 clean :
 	@rm -rf _site
 	@find . -name '*~' -exec rm {} \;

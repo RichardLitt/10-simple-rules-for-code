@@ -1,6 +1,7 @@
 *~
 *.aux
-*.log
+*.bak
 *.bbl
 *.blg
+*.log
 *.out

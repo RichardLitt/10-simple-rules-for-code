@@ -10,22 +10,36 @@
 }
 \newline
 \\
-% \input{contributors}
-Organized by Richard Littauer: see \texttt{contributors.tex} for all contributors to date.
+Richard Littauer\textsuperscript{RL*},
+Greg Wilson\textsuperscript{GW},
+Daniel S.\ Katz\textsuperscript{DK}
+\\
+\bigskip
+\textbf{RL} CURIOSS, SustainOSS, GNOME Foundation, and Te Herenga Waka Victoria University of Wellington, Wellington, New Zealand, \orcid{0000-0001-5428-7535}\\
+\textbf{GW} Plotly Inc., Toronto, Ontario, Canada, \orcid{0000-0001-8659-8979}\\
+\textbf{DK} University of Illinois Urbana-Champaign, IL, USA, \orcid{0000-0001-5934-7525}
 \end{flushleft}
+
+\begin{itemize}
+\item
+  See \texttt{contributors.tex} for all contributors to date.
+\item
+  Superscript initials will be replaced with numbers once the contributor list stabilizes.
+\end{itemize}
 
 \section*{Abstract}
 
-In open source, there is always a risk that a project will lose its maintainers,
-with the grimly named "bus factor" typically described as a risk factor.
-But this has always been meant to describe more situations than the core
-developer or maintainer literally being hit by a bus. For example,
-the maintainer may have to step away due to illness, to care
-for another such as a newborn, from burnout, or from a lack of financial
-support. In today's climate, political or financial changes are
-putting relatively large numbers of developers and maintainers out of work,
-pontentially leaving the software they have worked on abandoned.
-In this article, we present ten tips to help researchers ensure that
+Loss of key personnel has always been a risk for research software projects.
+Key members of the team may have to step away due to illness or burnout,
+to care for a family member,
+from a loss of financial support,
+or because their career is going in a new direction.
+Today,
+though,
+political and financial changes are putting large numbers of researchers out of work simultaneously,
+potentially leaving large amounts of research software abandoned.
+In this article,
+we present ten tips to help researchers ensure that
 the software they have built will continue to be usable
 after they have left their present job.
 
@@ -138,9 +152,8 @@ as planning may help you identify risks you can eliminate.
   involving participants outside the United States.
   Similar levies on email,
   file storage,
-  and other online services would paradoxically have \emph{less} long-term impact on research
-  than the targeted threats described above,
-  as they would force national governments to find effective remedies quickly.
+  and other online services would undoubtedly prompt national governments to find alternatives,
+  but would still result in (at least) months of disruption.
 
 \end{enumerate}
 
@@ -239,16 +252,14 @@ finding out after you have agreed to take something on
 that it is much larger than you realized
 can strain both professional and personal relationships.
 
-If the project is large,
-and you have enough time,
-consider working with a fiscal sponsor such as
+Some projects try to ensure longevity by working with a fiscal sponsor such as
 \href{https://numfocus.org/}{NumFOCUS},
 \href{https://sfconservancy.org/}{Software Freedom Conservancy},
 \href{https://www.eclipse.org/}{the Eclipse Foundation},
 \href{https://oscollective.org/}{Open Source Collective},
 or other \href{https://sustainoss.org/academic-map/organizations/index.html}{foundations and fiscal hosts}.
 Through fiscal hosting,
-your project can take donations from its community to fund continued maintenance and other costs.
+a project can take donations from its community to fund continued maintenance and other costs.
 Universities and governments are generally poorly suited for this due to high overheads and procurement costs;
 fiscal sponsors may take an order of magnitude less.
 In addition,
@@ -256,7 +267,16 @@ a fiscal sponsor puts the software in a neutral home
 where it is no longer owned by a single research organization,
 which helps insulate it from shifts in policy.
 
-\section*{Tip 4: Choose an open license}
+However,
+fiscal sponsorship is only an option in some countries,
+and being accepted as a sponsored project is a long and difficult process.
+Even when it is possible,
+the copyright holder of the work may continue to be the institution that paid for the development of the software.
+Private foundations may be a more attractive alternative in some jurisdictions;
+as per Tip~2,
+check with \emph{local} legal experts before taking action.
+
+\section*{Tip 4: Choose an open license (if you can)}
 
 Making code publicly available does not ensure that other people can use it:
 you maintain all copyright unless you explicitly include a license,
@@ -289,6 +309,21 @@ Whatever license you choose,
 place its text in a file called \texttt{LICENSE}, \texttt{LICENSE.txt}, or \texttt{LICENSE.md}
 in the root directory of your project,
 as this is where people and automated tools alike will look for it.
+
+\begin{quote}
+  \noindent
+  \textbf{The Law, Again}
+
+  Most discussion of open source licensing focuses on circumstances in a handful of affluent countries
+  in the same way as discussion of fiscal sponsorship (Tip~3).
+  For example,
+  many Latin American countries have access to information laws that include research outcomes and artifacts.
+  You can publish data and software under that,
+  but the institution sets the license type,
+  and you must use institutional repositories.
+  As always,
+  consult \emph{local} legal experts before taking action.
+\end{quote}
 
 \section*{Tip 5: Save everything in multiple places}
 
@@ -381,7 +416,7 @@ Again,
 this is a place where colleagues can help:
 ask them to make copies on their computers in exchange for you making copies of theirs on yours.
 Whatever you do,
-document it \href{https://ropensci.org/blog/2022/03/22/safeguards-and-backups-for-github-organizations/}{like rOpenSci has}.
+document it \href{https://ropensci.org/blog/2022/03/22/safeguards-and-backups-for-github-organizations/}{as rOpenSci has}.
 
 Similarly,
 if you distribute your code as a package on \href{https://pypi.org/}{PyPI},
@@ -409,7 +444,7 @@ Announcing your project on mailing lists, forums, or social media,
 and talking about it at conferences are necessary but not sufficient:
 everyone else is doing this too,
 so your project will almost certainly get lost in the noise.
-\cite{Kuchner2011} is a good guide to what you can do beyond the obvious.
+\cite{Kuchner2011,BelliniSaibene2024} are good guides to what you can do beyond the obvious.
 A short video showing how to use the software
 or a slide deck that others can incorporate into their lectures
 will increase uptake by lowering the cost of adoption.
@@ -523,6 +558,9 @@ please consult the next tip.
 
 \end{enumerate}
 
+Note that all of the suggestions above will also help with adoption,
+for the same reason that a tidy restaurant attracts more customers than a messy one.
+
 \section*{Tip 8: Do what you can (if you have to act quickly)}
 
 A paramedic is not a doctor who cuts corners,
@@ -603,7 +641,7 @@ is to become active in professional associations
 and push them to take meaningful action.
 
 Many readers of this paper will find the thought of doing this uncomfortable.
-As Putnam \cite{Putnam2020} points out,
+As Putnam points out \cite{Putnam2020},
 voluntary organizations have seen a slow but steady decline in membership over several decades.
 While there are many contributing factors,
 the net result is that professionals aged 30--60
@@ -612,11 +650,14 @@ This disengagement effectively hands power to extremists and special interest gr
 and enables them to seize control of civil institutions in order to advance their agendas \cite{BuenoDeMesquita2022}.
 To see the impact,
 ask yourself who is more likely to run for a seat on your local school board:
-a professor of epidemiology or an anti-vax conspiracy theorist?
+someone with a doctorate in epidemiology or an anti-vax conspiracy theorist?
 
 We have written this paper because we believe scientific inquiry is a public good and worth fighting for.
 The present climate requires us to focus on preserving what we can,
 but playing defense is just a way to lose more slowly.
+If we work together and accept that we and our institutions need to change,
+we can create a world in which research does not just survive,
+but thrives.
 
 \bibliography{code-rules}
 
