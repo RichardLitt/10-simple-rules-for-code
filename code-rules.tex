@@ -13,87 +13,52 @@
 Richard Littauer\textsuperscript{RL*},
 Greg Wilson\textsuperscript{GVW},
 Daniel S.\ Katz\textsuperscript{DSK},
-Yanina Bellini Saibene\textsuperscript{YBS},
-Kris Bubendorfer\textsuperscript{KB},
-Kaylea Champion\textsuperscript{KC},
-Jouni Helske\textsuperscript{JH},
-Pierre Marshall\textsuperscript{PM},
-Daniel R. McCloy\textsuperscript{DRM}, 
-Ian McInerney\textsuperscript{IM}
+Yanina Bellini Saibene\textsuperscript{YBS}
 \\
 \bigskip
 \textbf{RL} CURIOSS, SustainOSS, GNOME Foundation, and Te Herenga Waka Victoria University of Wellington, Wellington, New Zealand, \orcid{0000-0001-5428-7535}\\
-\textbf{GVW} Plotly Inc., Toronto, ON, Canada, \orcid{0000-0001-8659-8979}\\
+\textbf{GVW} Plotly Inc., Toronto, Ontario, Canada, \orcid{0000-0001-8659-8979}\\
 \textbf{DSK} University of Illinois Urbana-Champaign, IL, USA, \orcid{0000-0001-5934-7525}\\
-\textbf{YBS} rOpenSci, Argentina, \orcid{0000-0002-4522-7466}\\
-\textbf{KB} Te Herenga Waka Victoria University of Wellington, Wellington, New Zealand, \orcid{0000-0003-4315-8337}\\
-\textbf{KC} Computing and Software Systems, University of Washington Bothell, Bothell, WA, USA \orcid{0000-0001-6196-942X}\\
-\textbf{JH} INVEST Research Flagship Centre, University of Turku, Finland, \orcid{0000-0001-7130-793X}\\
-\textbf{PM} Oxford University, UK, \orcid{0000-0001-9245-7670}\\
-\textbf{DRM} Institute for Learning \& Brain Sciences, University of Washington, Seattle, WA, USA \orcid{0000-0002-7572-3241}\\
-\textbf{IM} Department of Mechanical Engineering, Imperial College London, London, UK \orcid{0000-0003-2616-9771}\\
-* richard@burntfen.com
+\textbf{YBS} rOpenSci, \orcid{0000-0002-4522-7466}
 \end{flushleft}
-
-We are grateful for contributions from:
 
 \begin{itemize}
 \item
-  David Pérez-Suárez, Centre for Advance Research Computing, University College London, UK \orcid{0000-0003-0784-6909}\\
-\item
-  Sam Cunliffe, Centre for Advance Research Computing, University College London, UK \orcid{0000-0003-0167-8641}\\
-\end{itemize}
-
-\section*{Notes}
-
-\begin{enumerate}
-\item
   See \texttt{contributors.tex} for all contributors to date.
 \item
-  We will reformat the ``grateful for contributions'' list once we've heard from everyone.
-\item
-  Superscript initials in the author list will be replaced with numbers once the contributor list stabilizes to match PLOS formatting guidelines.
-\end{enumerate}
+  Superscript initials will be replaced with numbers once the contributor list stabilizes.
+\end{itemize}
 
 \section*{Abstract}
 
 Loss of key personnel has always been a risk for research software projects.
-Key members of the team may have to step away due to illness or burnout,
-to care for a family member,
-from a loss of financial support,
-or because their career is going in a new direction.
-Today,
-though,
-political and financial changes are putting large numbers of researchers out of work simultaneously,
-potentially leaving large amounts of research software abandoned.
-In this article,
-we present ten tips to help researchers ensure that
-the software they have built will continue to be usable
-after they have left their present job.
+Key members of the team may have to step away due to illness or burnout, to care for a family member, from a loss of financial support, or because their career is going in a new direction.
+Today, though, political and financial changes are putting large numbers of researchers out of work simultaneously, potentially leaving large amounts of research software abandoned.
+In this article, we present ten tips to help researchers ensure that the software they have built will continue to be usable after they have left their present job.
 
 \linenumbers
 
 \section*{Introduction}
 
 Academic life is often precarious,
-not least for those who work on research software,
+particularly for those who work on research software,
 an asset that is essential to modern research \cite{Pearson2025}
 but often underfunded, undercited, and overlooked \cite{Carver2022}.
-The situation has recently worsened dramatically due to changes in the political and economic climate:
+The situation has recently worsened dramatically due to changes in the political climate:
 researchers in all disciplines face the loss of funding or jobs,
 a smaller pool of incoming students,
 and institutional policies that prioritize commercial returns.
 Researchers in non-academic organizations
-such as government labs, non-governmental organizations (NGOs), and non-profits are also impacted \cite{Woodward2025}
-as national research strategies are upended
-and associated public funding redirected or cut entirely \cite{Nature2025}.
+such as government laboratories, non-governmental organizations (NGOs), and non-profits are also affected \cite{Woodward2025}
+as national research strategies are changed
+and associated public funding is redirected or cut entirely \cite{Nature2025}.
 
-In this environment it is essential that research software projects be \emph{resilient}.
+In this environment, it is essential that research software projects be \emph{resilient}.
 Code should outlast situations such as the author changing workplaces or careers,
 partnerships failing,
 a lab closing down,
 or tooling and digital infrastructure becoming unavailable.
-We therefore present ten tips to ensure your software remains accessible and usable by others
+We therefore present ten tips to ensure that your software remains accessible and usable by others
 even if you are no longer able to work on it.
 You do not need to adopt all of them to make things better;
 instead,
@@ -110,7 +75,7 @@ the \href{https://eotarchive.org/}{End Of Term Archive}
 or the \href{http://archive.org/}{Internet Archive}
 are now widely used to ensure long-term availability.
 However,
-we have not found any guide to making research software resilient
+we have not found any guide to make research software resilient
 or to \emph{sunsetting} it (i.e., phasing it out gracefully).
 Even if your job is not in danger,
 these tips will help others access and use your code,
@@ -118,103 +83,25 @@ contribute to your project,
 and to reproduce and cite your work.
 As such,
 our recommendations
-are aligned with the global push for more equitable assessment of research contributions
-by initiatives like \href{https://sfdora.org/}{DORA},
+are aligned with the global push for a more equitable assessment of research contributions
+by initiatives such as \href{https://sfdora.org/}{DORA},
 \href{https://coara.eu/}{coARA},
 and \href{https://adore.software/}{ADORE.software}.
 
-\section*{Tip 1: Stay within the law}
+\section*{Tip 1: Consider your threat model}
 
-Ensuring your work remains usable is not worth putting yourself at legal risk.
-Before following any of the tips below,
-make sure you have a legal right to do so.
-Most institutions and journals now have policies for licensing code and/or releasing it publicly \cite{Katz2018,Ham2019}.
-Funding agencies at various levels also often have policies
-(e.g.,
-EU\footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en}}, UKRI\footnote{\url{https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/}}, 
-and NASA\footnote{\url{https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities}})
-which may or may not align with those of institutions and journals,
-and institutional policies may place restrictions on what you are allowed to say publicly about your situation.
-Our first actionable tip is therefore to find out what those policies are,
-e.g.,
-whether you need explicit permission to publish your software,
-and if so,
-from whom.
-
-If you are unsure whether there is a policy or not,
-ask your direct manager,
-the person who pays you,
-or offices like the research office,
-the library,
-or the technology transfer office.
-If your institution has a dedicated
-\href{https://sustainoss.org/academic-map/universities/index.html}{Open Source Program Office} (OSPO),
-ask them
-or connect to networks like \href{https://curioss.org}{CURIOSS},
-the \href{https://ospo-alliance.org/}{OSPO Alliance},
-or the \href{https://todogroup.org/}{TODO Group}
-that advocate for OSPOs.
-If you work with multiple institutions,
-look at your contract and the bilateral agreements around products or deliverables.
-
-Once you know whether your institution has a policy,
-get whatever sign-offs you need immediately.
-Reach out to colleagues who can review your code if that is necessary for publishing it,
-and review theirs if asked in return.
-If it appears that there is no formal sign-off process,
-send an email to someone in authority
-(e.g., the chair of your department or your grant officer)
-saying that you believe this to be the case,
-and copy that email to an account you will be able to access
-after leaving your institution.
-
-Do not assume that if you had permission before,
-you have it now or will have it in the future.
-Policies are changing rapidly,
-and you may find yourself locked into one that no longer allows you to do what you want.
-Also consider that the person you report to may be replaced with one who knows you less well or is less sympathetic,
-so acting now may be easier than acting later.
-
-Finally,
-if you have your next job lined up,
-ask about their policies
-and make sure that your right to share your work is written into your contract.
-Making your code comply with policy after the fact is riskier and more time-consuming than doing so early,
-and sometimes not possible.
-
-\begin{quote}
-  \noindent
-  \textbf{Not all rules are created equal}
-
-  Anyone who has worked in a large bureaucratic organization knows
-  the difference between the rules as written and the rules as enforced.
-  If you are leaving your position on short notice or under difficult circumstances,
-  you may want to be selective about which forms you fill in proactively
-  and which you just haven't gotten around to yet.
-  Members of marginalized groups have often had more practice with these tactics
-  than members of privileged groups \cite{Scott1987};
-  if you belong to the latter,
-  a quiet conversation or two with selected colleagues may help you see your priorities more clearly.
-\end{quote}
-
-\section*{Tip 2: Define your threat model}
-
-When making plans, it's useful to know what you're planning \emph{for}.
-A \textbf{threat model} is a structured analysis of where threats might come from,
-what form they might take,
-what social and technical vulnerabilitites they might exploit,
-and how they might be mitigated or resolved \cite{Torr2005}.
-Being explicit about threat models helps you prioritize,
+When making plans, it is useful to know what you're planning \emph{for}.
+Being explicit about \textbf{threat models} helps you prioritize,
 build consensus with colleagues,
 and check whether you have forgotten something important.
-As with all disaster planning,
-making plans before you need them may help you identify risks you can eliminate proactively.
+As with all disasters,
+making those plans before you need them helps reduce the odds of them being needed,
+as planning may help you identify risks you can eliminate.
 
 \begin{enumerate}
 \item
   \textbf{Individual threats} affect one or a few members of your team,
-  such as a student having their visa revoked without notice
-  or a contributor taking extended leave.
+  such as an international student having their visa revoked without notice, or a contributor taking extended leave.
   Especially for software under the maintenance of a single author,
   individual threats can also come from more mundane career or life changes.
   The most common way to prepare for this is to require everyone to document their work,
@@ -232,7 +119,7 @@ making plans before you need them may help you identify risks you can eliminate 
 
 \item
   \textbf{Leadership threats} are individual threats that affect the project's leader,
-  such as the leader being doxxed or targeted personally in the media because of their work.
+  such as the leader being doxxed or personally targeted in the media because of their work.
   Tip~3 discusses ways to plan for this.
 
 \item
@@ -240,19 +127,19 @@ making plans before you need them may help you identify risks you can eliminate 
   such as your department being shut down
   or your entire field having funding cut.
   These events affect so many people at the same time
-  that the rest of the community can't absorb them.
-  Regional and national governments prepare for disasters like these
+  that the rest of the community cannot absorb them.
+  Regional and national governments plans for disasters like these
   by having evacuation plans to get victims to safe(r) places
   and corollary plans for putting beds in high school gyms
   and flying in food and emergency medical personnel to help people when they arrive.
   At the time of writing,
-  universities and researchers' professional societies have not started to do the equivalent.
+  universities and researchers' professional societies have not started to externally share equivalent planning, if they have started making those plans at all.
 
 \item
   \textbf{Global threats} affect everyone,
   not just researchers.
   For example,
-  there is no technical or legal obstacle to the US government
+  there is no technical or legal obstacle for the US government
   requiring American companies to charge for video conferencing calls
   involving participants outside the United States.
   Similar levies on email,
@@ -262,32 +149,87 @@ making plans before you need them may help you identify risks you can eliminate 
 
 \end{enumerate}
 
-\section*{Tip 3: Decide if you are ending, pausing, or handing off}
+\section*{Tip 2: Stay within the law}
 
-Thousands of books describe how to start a business,
-but only a handful discuss handing one over or winding one down,
+Ensuring your work remains usable is not worth putting yourself at legal risk.
+Before following any of the tips below,
+make sure that you have the legal right to do so.
+Most institutions and journals now have policies for licensing code and/or releasing it publicly \cite{Katz2018,Ham2019}.
+Funding agencies at various levels also often have policies
+(e.g.,
+EU\footnote{\url{https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en}}
+and NASA\footnote{\url{https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities}})
+which may or may not align with those of institutions and journals,
+and institutional policies may place restrictions on what you are allowed to say publicly about your situation.
+Our first actionable tip is therefore to find out what those policies are,
+e.g.,
+whether you need explicitly permission to publish your software,
+and if so,
+from whom.
+
+If you are unsure whether there is a policy or not,
+ask your direct manager,
+the person who pays you,
+or offices like the research office,
+the library,
+or the tech transfer office.
+If your institution has a dedicated
+\href{https://sustainoss.org/academic-map/universities/index.html}{Open Source Program Office} (OSPO),
+ask them
+or connect to networks such as \href{https://curioss.org}{CURIOSS},
+the \href{https://ospo-alliance.org/}{OSPO Alliance},
+or the \href{https://todogroup.org/}{TODO Group}
+that advocate for OSPOs.
+If you work with multiple institutions,
+look at your contract and the bilateral agreements around products or deliverables.
+
+After determining whether your institution has a policy regarding code licensing, immediately acquire any necessary approvals.
+Reach out to colleagues who can review your code if that is necessary for publishing it,
+and review theirs if they ask.
+If it appears that there is no formal sign-off process,
+send an email to someone in authority
+(e.g., the chair of your department or your grant officer)
+saying explicitly that you believe this to be the case,
+and copy that email to an account you will be able to access
+after leaving your institution.
+
+Do not assume that if you had permission before,
+you have it now or will have it in the future.
+Policies are changing rapidly,
+and you may find yourself locked into one that no longer allows you to do what you want.
+Also consider that the person you report to may be replaced with one who knows you less well or is less sympathetic,
+so acting now may be easier than acting later.
+
+Finally,
+if you have your next job lined up,
+ask about their policies
+and make sure that your right to share your work is written into your contract.
+Making your code comply with policy after the fact is riskier and more time-consuming than doing so early,
+and sometimes not possible.
+
+\section*{Tip 3: Decide if you are ending, pausing, and passing on}
+
+There are thousands of books in print about how to start a business,
+but only a handful describe how to hand one over or wind one down,
 and most of those focus on succession within family-owned businesses.
-Guides to running a laboratory say little more \cite{Barker2010,Cohen2018},
-so such wisdom as we have is generally passed on person-to-person if it is passed on at all.
+Guides to running a laboratory, such as \cite{Barker2010,Cohen2018} say little more,
+so such wisdom as we have is passed on person-to-person if it is passed on at all.
 
 The first step is to decide if work on the project is ending,
 being suspended temporarily (for some version of ``temporarily''),
-or if you are handing it off to someone else.
+or if you are handing it on to someone else.
 If the project is ending or going on hiatus,
 focus on making what you have accomplished findable and citable
 as discussed in the tips that follow.
 To help you prioritize,
 write up the goals you initially had for this project
-and ask how well they were served by what you actually did.
-Doing this may actually help you realize that the project doesn't have to end,
-but can instead be folded into someone else's work,
-even if you are no longer involved.
+and ask how well they were served by what you actually did. This approach could lead you to understand that the project does not have to conclude, but can be integrated into another person's work, even without your continued participation.
 
-If instead you hope to hand the project off to someone else,
+If instead you hope to hand the project on to someone else,
 you can either choose a successor
 (who will typically be someone already working on the project)
 or ask your peers for volunteers or recommendations.
-Writing a \emph{succession plan} that describes what becoming and being the maintainer will actually entail
+Writing a \emph{succession plan} that describes what the work will actually entail
 will help in both cases.
 What will your successor have to learn and do during the transition?
 What will they be responsible for once they are in charge?
@@ -309,40 +251,42 @@ a project can take donations from its community to fund continued maintenance an
 Universities and governments are generally poorly suited for this due to high overheads and procurement costs;
 fiscal sponsors may take an order of magnitude less.
 In addition,
-a fiscal sponsor puts the software in a neutral home
+a fiscal sponsor places the software in a neutral home
 where it is no longer owned by a single research organization,
-which helps insulate it from shifts in policy.
+which helps to insulate it from changes in policy.
 
 However,
 fiscal sponsorship is only an option in some countries,
-and being accepted as a sponsored project is often a long and difficult process.
+and being accepted as a sponsored project is a long and challenging process.
 Even when it is possible,
 the copyright holder of the work may continue to be the institution that paid for the development of the software.
 Private foundations may be a more attractive alternative in some jurisdictions;
-as per Tip~1,
+as per Tip~2,
 check with \emph{local} legal experts before taking action.
 
 \section*{Tip 4: Choose an open license (if you can)}
 
-Making code publicly available does not ensure that other people can use it,
-as the copyright holder retains all rights unless a license explicitly states otherwise.
+Making code publicly available does not ensure that other people can use it:
+you maintain all copyright unless you explicitly include a license,
+so they may still need explicit permission
+or may simply be unsure whether they do or not.
 The Open Source Initiative (OSI)
 maintains a list of \href{https://opensource.org/licenses}{open source licenses} it has approved;
-the implications of these licenses are widely understood,
+their implications are widely understood,
 so choosing one of those will make your project more understandable to others.
-Please do \emph{not} try to write your own license or simply waive copyright and place the software into the ``public domain''\footnote{What is meant by ``public domain'' varies from country to country and is directly affected by copyright legislation, and it may not be possible to actually waive copyright and place a work in the public domain in some countries, e.g., France and Germany.},
+Please do \emph{not} try to write your own license,
 as it will have the opposite effect.
 
 Broadly speaking,
-the MIT, Apache 2.0, or BSD-3-Clause licenses are \emph{permissive} licenses that place the fewest restrictions on re-use and grant the user broad freedom to use, modify and distribute the software. 
+the MIT, Apache 2.0, or BSD-3-Clause licenses place the fewest restrictions on re-use.
 The GPLv3 and AGPL-3.0 licenses are \emph{copyleft} licenses
 that require people to share their modifications to the software with the community \cite{Morin2012}.
-These copyleft licenses can prevent companies from taking advantage of your work without giving anything in return,
-but some institutions discourage or disallow their use
-out of fear that they will constrain commercialization, and some companies have policies against using software with some copyleft licenses.
+These licenses can prevent companies from taking advantage of your work without giving anything in return,
+but institutions discourage or disallow the use of copyleft licenses
+out of fear that they will constrain commercialization.
 
 More broadly,
-\href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports (but should be avoided for actual code),
+\href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports,
 while \href{https://ethicalsource.dev/}{ethical licenses}
 or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be appropriate.
 For guidance,
@@ -356,7 +300,7 @@ as this is where people and automated tools alike will look for it.
 
 \begin{quote}
   \noindent
-  \textbf{The law, again}
+  \textbf{The Law, Again}
 
   Most discussion of open source licensing focuses on circumstances in a handful of affluent countries
   in the same way as discussion of fiscal sponsorship (Tip~3).
@@ -371,16 +315,16 @@ as this is where people and automated tools alike will look for it.
 
 \section*{Tip 5: Save everything in multiple places}
 
-Now that you're legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.
+Now that you are legally able to share your code, remember LOCKSS: Lots of Copies Keep Stuff Safe.
 But copies are not enough:
-the threats to your project are political as well as technological (Tip~2),
+the threats to your project are political as well as technological,
 so you should ensure that loss of institutional support
 (or worse, that institution turning on you)
 does not mean loss of access.
 
 \begin{quote}
   \noindent
-  \textbf{The road not taken}
+  \textbf{The Road Not Taken}
 
   \cite{Langille2010} described a file-sharing system for scientific data
   based on the BitTorrent protocol.
@@ -424,7 +368,7 @@ even when your contact address changes.
 
 \begin{quote}
   \noindent
-  \textbf{What's in a project?}
+  \textbf{What's In a Project?}
 
   When deciding what to store where,
   remember that your version control repository only stores part of what makes up your project.
@@ -436,16 +380,16 @@ even when your contact address changes.
   the odds are high that other people are trying to do it at the same time.
   GitHub's servers may not be able to manage that load when you need them to,
   so use tools like \href{https://github.com/jlord/offline-issues}{offline-issues}
-  to save hosted content as plain-text files on a regular basis.
+  to save hosted content as plain-text files regularly.
 \end{quote}
 
-Version control isn't the only way to create and save copies of your work.
+Version control is not the only way to create and save copies of your work.
 \href{https://www.softwareheritage.org/how-to-archive-reference-code/}{Software Heritage} archives software from multiple forges;
 you can also snapshot the current state of repositories in a compressed archive file
 (e.g., \texttt{.zip} or \texttt{.tar.gz})
 and deposit those copies with the \href{https://osf.io/}{Open Science Foundation} (OSF),
 \href{https://zenodo.org/}{Zenodo},
-or \href{https://figshare.com/}{Figshare}.
+or \href{https://figshare.com/}{figshare}.
 (Zenodo even integrates with GitHub so that tagging a release on GitHub
 automatically triggers deposit of a new archive on Zenodo,
 but again,
@@ -454,7 +398,7 @@ Institutional,
 \href{https://amt.coretrustseal.org/certificates/}{national},
 or \href{https://safeguar.de/}{international} data repositories also enhance longevity.
 
-Storing copies on someone else's computer isn't the only option:
+Storing copies on someone else's computer is not the only option:
 you can (and should) make copies of your projects on computers that you own.
 Again,
 this is a place where colleagues can help:
@@ -466,55 +410,51 @@ Similarly,
 if you distribute your code as a package on \href{https://pypi.org/}{PyPI},
 \href{https://anaconda.org/anaconda/conda}{Conda},
 or \href{https://cran.r-project.org/}{CRAN},
-that package can contain all of the source code,
-and distribution in this form encourages community collaboration.
+that package can contain all of the source code.
+Doing this also fosters community collaboration.
 
 \section*{Tip 6: Encourage community adoption}
 
 Publishing your code is not the same as publicizing it.
 The more people who know about and rely on your project,
-the greater the odds that someone will work on it directly,
-fork it to create a new project,
-or support you.
-If you haven't named your project yet,
-choose a name that doesn't hint at direct and exclusive affiliation with one institution.
+the greater the chances that someone will help keep it alive,
+whether by working on it directly or supporting you in doing so.
+A simple way to help people get involved is to label entry-level issues
+(e.g., to use the ``good first issue'' label on GitHub)
+so that people can find a place to start \cite{Steinmacher2015}.
+
+If you have not named your project yet,
+choose a name that does not hint at direct and exclusive affiliation to a single institution.
 This can help if the code needs to be relocated,
 and also makes contributors from other institutions feel welcome.
-Additionally,
-label entry-level issues
-(e.g., to use the ``good first issue'' label on GitHub)
-so that people can easily find a place to start \cite{Steinmacher2015}.
 
-Going further,
-\cite{Fang2022} found a causal link between social media mentions and both new adopters and new contributors.
 Announcing your project on mailing lists, forums, or social media,
-and talking about it at conferences are therefore necessary but not sufficient:
-since everyone else is doing this too,
-it is hard to be heard above the noise.
-
-Good guides to what you can do to promote your software project beyond the obvious are~\cite{Kuchner2011,BelliniSaibene2024}.
+and talking about it at conferences are necessary but not sufficient:
+everyone else is doing this, too,
+so your project will almost certainly get lost in the noise.
+\cite{Kuchner2011,BelliniSaibene2024} are good guides to what you can do beyond the obvious.
 A short video showing how to use the software
 or a slide deck that others can incorporate into their lectures
 will increase uptake by lowering the cost of adoption.
 Similarly,
 a one-page website that opens with an elevator pitch
 explaining who the software is for
-and how it will make their lives better
+and how it will improve their lives
 is much more likely to lead to that crucial ``second glance''
 than a list of publications.
 
-Disseminating your code via tutorials at conferences is another effective strategy.
+Disseminating your code through tutorials at conferences is another effective strategy.
 Tutorials are an opportunity for you,
 as an author,
 to describe your work in depth
 and (more importantly) convince your audience to use it.
 Networking through such events will enable you to build relationships with
 the people most likely to care about your project,
-and is the best way to ensure that you land well after you leave your current position.
+and it is the best way to ensure that you land well after you leave your current position.
 
 \begin{quote}
   \noindent
-  \textbf{One to many}
+  \textbf{One to Many}
 
   If you can, have at least one person outside your organization commit to your code.
   Such community contributions lead to joint ownership of intellectual property (IP),
@@ -523,7 +463,7 @@ and is the best way to ensure that you land well after you leave your current po
 \end{quote}
 
 Finally,
-remember that it isn't all about \emph{your} project.
+remember that it is not all about \emph{your} project.
 If you ask others to help maintain your code,
 be prepared to give them something in return:
 a letter of reference,
@@ -533,10 +473,10 @@ or co-authorship credit on the project and associated publications.
 \section*{Tip 7: Do what you're supposed to (if you have time)}
 
 Research software is increasingly recognized as a citable object \cite{Smith2016,Katz2021,Garijo2024},
-and numerous books and papers describe how to organize and run a research software project.
+and numerous books and research papers describe how to organize and run a research software project.
 Rather than repeating what is in
 \cite{Sandve2013,Wilson2014,Lee2018a,Dryden2019,Akhmerov2020,Chue2021,Lees2022,Druskat2023,Akhmerov2023,Kumar2023,Struck2023,Reina2024},
-our seventh tip is a prioritized checklist of things to do
+this tip is a prioritized checklist of things to do
 \emph{if you have time}.
 If you do not,
 please consult the next tip.
@@ -549,13 +489,13 @@ please consult the next tip.
   and add a \href{https://citation-file-format.github.io/}{Citation.CFF}
   or \href{https://codemeta.github.io}{codemeta.json} file to your code \cite{Druskat2021}
   containing citation metadata.
-  Tools such as \href{https://citation-file-format.github.io/cff-initializer-javascript/}{cffinit},
+  Tools such as \href{https://citation-file-format.github.io/cff-initializer-javascript/}{cffinit}
   \href{https://codemeta.github.io/codemeta-generator/}{codemeta generator},
   and \href{https://github.com/citation-file-format/citation-file-format/blob/main/README.md\#tools-to-work-with-citationcff-files-wrench}{others}
   can help you do this.
 
 \item
-  Submit your code for peer review and publication in a venue such as
+  Have your code peer-reviewed and published in a venue such as
   the \href{https://joss.theoj.org/}{Journal of Open Source Software},
   the \href{https://openresearchsoftware.metajnl.com/}{Journal of Open Research Software},
   the \href{http://www.jstatsoft.org}{Journal of Statistical Software},
@@ -582,19 +522,16 @@ please consult the next tip.
   using Python's \href{https://packaging.python.org/en/latest/guides/writing-pyproject-toml/}{pyproject.toml} file,
   an npm \href{https://docs.npmjs.com/cli/v10/configuring-npm/package-json?v=true}{package.json} file,
   the \texttt{DESCRIPTION} and \texttt{NAMESPACE} files of an R package,
-  a \href{https://openssf.org/technical-initiatives/sbom-tools/}{software bill of materials} (SBOM),
   or whatever else is standard for your language.
 
 \item
   Write at least a few tests for your software
   so that people who want to use it (or contribute to it)
-  can tell if it's working in their environment.
+  can tell if it is working in their environment.
   These do not have to be formal unit tests \cite{Irving2021}:
   as \cite{Taschuk2017} explains,
   even a handful of ``this input should produce this output'' checks
   can save a lot of frustration.
-  Including sample inputs is also helpful,
-  and removes dependence on external data sources which may themselves face continuity challenges.
 
 \item
   Document how to \emph{contribute} to your software,
@@ -619,14 +556,14 @@ but rather someone who has been trained to work subject to very different constr
 \cite{Wilson2017} provides some guidance for ``good enough'' practices in research computing;
 other tips in this paper are in this vein,
 such as creating \texttt{.zip} archives of your project as an alternative to using version control.
-If you are short on time:
+A few others include:
 
 \begin{enumerate}
 
 \item
-  Explanations of what the software \emph{does} and \emph{how to use it}
+  Explanations of what the software does and how to use it
   take priority over documentation of its internals
-  because (a) someone who knows the first two will be better able to figure out the third
+  because (a) someone who knows the former will be better able to figure out the latter
   and (b) AI code assistants can do a reasonable job of helping newcomers navigate an unfamiliar code base
   if they are given enough context.
 
@@ -636,8 +573,13 @@ If you are short on time:
   is often faster to create than pages of documentation,
   and may actually be more useful if closed captions are attached
   to make the content searchable.
-  AI tools can help create captions,
-  though some editing is invariably required to clean up mistranscription of technical jargon.
+  Again,
+  AI tools can help create those captions,
+  though some editing is invariably required to clean up mistranslation of technical jargon.
+
+\item
+  Following on from Tip 5, you can \href{https://archive.softwareheritage.org/browse/search/}{search the Software Heritage Archive} with your repository url to check whether it has been saved.
+  If your repository is not present, there is a \href{https://archive.softwareheritage.org/save/}{simple process} to submit it for archival.
 
 \item
   If you do not have time to bring your project in line with best practices,
@@ -645,42 +587,32 @@ If you are short on time:
   deleting sections of your setup instructions that no longer apply,
   closing bug reports that are no longer relevant,
   and so on.
-  Eliminating clutter will make key pieces easier to find.
+  Eliminating clutter in this way will make what is useful easier to find.
 
 \item
   Briefly document what happened.
-  If you're the main developer working on a grant and you've moved on to something else,
+  If you are the main developer working on a grant and you have moved on to something else,
   say that in the README.
-  If the funding changed, say that the work is unfunded.
+  If the funding changed, then say that the work is unfunded.
   This information is often the most useful for users but the hardest to find.
   Saying it up front will help others understand how your work is positioned.
-
-  \item
-    Following on from Tip~5,
-    you can search the \href{https://archive.softwareheritage.org/browse/search/}{Software Heritage Archive}
-    to check if your repository has been saved.
-    If not,
-    submitting it is a \href{https://archive.softwareheritage.org/save/}{simple process}.
 
 \end{enumerate}
 
 \section*{Tip 9: Talk about what you're doing}
 
-All of the work we have described is extra labor.
-You won't want to do it,
+All of the work that we have described is extra labor.
+You will not want to do it,
 particularly not when so many other things demand attention as well.
 Make that work meaningful by helping others.
 Tell your colleagues what you have learned about your institution's legal requirements,
 about navigating its bureaucracy,
 and about the least hurtful way to break the news to your students, collaborators, and users.
-Share your own tips on social media,
+Share your own tips on social media
+(preferably Mastodon rather than X or Bluesky,
+as the latter two are single points of institutional failure),
 and share things that \emph{haven't} worked as well
-so that other people can avoid the same pitfalls.
-
-Sharing your experience during a difficult time is valuable even if your only audience is yourself.
-Writing down what happened, what you did, how you felt, what you have learned, and what you hope for
-are evidence-based strategies for protecting your mental health in stressful times
-and for healing afterwards \cite{Pennebaker2016,Cullen2022}.
+so that other people can avoid stepping on the same landmines.
 
 Most importantly,
 take the time to grieve.
@@ -694,22 +626,16 @@ often become altruistic, resourceful, and brave.
 
 \section*{Tip 10: Organize}
 
-In 2013,
-the Conservative government of Canada ordered the closure of
-five of the Department of Fisheries and Oceans' seven libraries \cite{Nikiforuk2013}.
-No one knows how many thousands of volumes of irreplaceable environmental records were destroyed;
-what is clear now is that even scientists who were directly affected
-did not make plans to deal with a recurrence.
-
 There is little point surviving today's flood if you drown in tomorrow's.
 The best strategy is to take preventive action,
-so our final tip is to become active in professional associations
+and the best way to do that in a research context
+is to become active in professional associations
 and push them to take meaningful action.
 
 Many readers of this paper will find the thought of doing this uncomfortable.
 As Putnam points out \cite{Putnam2020},
 voluntary organizations have seen a slow but steady decline in membership over several decades.
-While there are many contributing factors,
+Although there are many contributing factors,
 the net result is that professionals aged 30--60
 are less likely to be involved in civil society and the political process than the generation before them.
 This disengagement effectively hands power to extremists and special interest groups
@@ -718,7 +644,7 @@ To see the impact,
 ask yourself who is more likely to run for a seat on your local school board:
 someone with a doctorate in epidemiology or an anti-vax conspiracy theorist?
 
-We have written this paper because we believe scientific inquiry is a public good and worth fighting for.
+We have written this paper because we believe that scientific inquiry is a public good and worth fighting for.
 The present climate requires us to focus on preserving what we can,
 but playing defense is just a way to lose more slowly.
 If we work together and accept that we and our institutions need to change,
