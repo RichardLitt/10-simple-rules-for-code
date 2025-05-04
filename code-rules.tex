@@ -300,7 +300,7 @@ making plans before you need them may help you identify risks you can eliminate 
 Thousands of books describe how to start a business,
 but only a handful discuss handing one over or winding one down,
 and most of those focus on succession within family-owned businesses.
-Guides to running a laboratory, such as \cite{Barker2010,Cohen2018} say little more,
+Guides to running a laboratory say little more \cite{Barker2010,Cohen2018},
 so such wisdom as we have is passed on person-to-person if it is passed on at all.
 
 The first step is to decide if work on the project is ending,
@@ -378,13 +378,12 @@ but some institutions discourage or disallow their use out of fear that they wil
 and some companies have policies against using software with some copyleft licenses.
 
 More broadly,
-\href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports (but should be avoided for actual code),
+\href{https://creativecommons.org/}{Creative Commons} licenses can be used for documentation or research reports
+but should be avoided for actual code,
 while \href{https://ethicalsource.dev/}{ethical licenses}
 or licenses based on the \href{https://blueoakcouncil.org/license/1.0.0}{Blue Oak Model License} may also be appropriate.
-For guidance,
-go to \href{http://choosealicense.com}{choosealicense.com}
-or refer to \cite{Fogel2020,Fortunato2021};
-the discussion in \cite{Gomes2022} about why people \emph{don't} share is also helpful.
+\href{http://choosealicense.com}{choosealicense.com} and other sources provide guidance \cite{Fogel2020,Fortunato2021};
+discussion of why people \emph{don't} share is also helpful \cite{Gomes2022}.
 Whatever license you choose,
 place its text in a file called \texttt{LICENSE}, \texttt{LICENSE.txt}, or \texttt{LICENSE.md}
 in the root directory of your project,
@@ -418,14 +417,14 @@ does not mean loss of access.
   \noindent
   \textbf{The road not taken}
 
-  \cite{Langille2010} described a file-sharing system for scientific data
-  based on the BitTorrent protocol.
-  It failed to find wide adoption because of the (quite reasonable) association in many institutions' collective minds
-  between BitTorrent and illegal downloading.
+  Fifteen years ago,
+  a file-sharing system for scientific data based on the BitTorrent protocol
+  failed to find wide adoption because of the (quite reasonable) association in many institutions' collective minds
+  between BitTorrent and illegal downloading \cite{Langille2010}.
   At the time of writing,
   though,
   many individuals and groups are turning to BitTorrent to share datasets that are at risk of disappearing
-  precisely because of the protocol's resilience.
+  because of the protocol's resilience.
 \end{quote}
 
 \href{https://github.com/}{GitHub},
@@ -437,15 +436,20 @@ However,
 they are all commercial entities based in the same legal jurisdiction,
 which means they are vulnerable to \emph{correlated threats}:
 trouble with any of them may mean trouble with all of them.
-(\cite{Tamburri2020} is a sobering account of what can happen when key infrastructure comes under threat.)
 \href{https://codeberg.org/}{Codeberg},
 while currently much smaller,
 is a non-profit based in a different jurisdiction;
 consider mirroring your work there or using it as your primary host.
 Keep in mind that persistent code archival is not a feature of development platforms.
-Repositories can be altered, made private or deleted (also as a result of government takedowns\footnote{\url{https://github.com/github/transparency/tree/main/data/government_takedowns}});
-the platform itself may be shut down (as in the case of non-profit Gna!\footnote{\url{https://en.wikipedia.org/wiki/Gna!}})
-or change its revenue model (as in the case of, once dominant, SourceForge\footnote{\url{https://en.wikipedia.org/wiki/SourceForge}}).
+Repositories can be altered,
+made private,
+or deleted
+(also as a result of government takedowns\footnote{\url{https://github.com/github/transparency/tree/main/data/government_takedowns}});
+the platform itself may be shut down
+(as in the case of non-profit Gna!\footnote{\url{https://en.wikipedia.org/wiki/Gna!}}),
+or it may change its revenue model
+(as in the case of SourceForge\footnote{\url{https://en.wikipedia.org/wiki/SourceForge}},
+which once dominated the open source repository space in the way that GitHub does today \cite{Tamburri2020}).
 
 When you create projects on hosted services,
 use a team account as the project owner rather than a personal account.
@@ -528,13 +532,13 @@ label entry-level issues
 so that people can easily find a place to start \cite{Steinmacher2015}.
 
 Going further,
-\cite{Fang2022} found a causal link between social media mentions and both new adopters and new contributors.
+there is a causal link between social media mentions and both new adopters and new contributors \cite{Fang2022}.
 Announcing your project on mailing lists, forums, or social media,
 and talking about it at conferences are therefore necessary but not sufficient:
 since everyone else is doing this too,
 it is hard to be heard above the noise.
 
-Good guides to what you can do to promote your software project beyond the obvious are~\cite{Kuchner2011,BelliniSaibene2024}.
+There are many good guides to what you can do to promote your project \cite{Kuchner2011,BelliniSaibene2024}.
 A short video showing how to use the software
 or a slide deck that others can incorporate into their lectures
 will increase uptake by lowering the cost of adoption.
@@ -576,7 +580,7 @@ or co-authorship credit on the project and associated publications.
 
 Research software is increasingly recognized as a citable object \cite{Smith2016,Katz2021,Garijo2024},
 and numerous books and research papers describe how to organize and run a research software project.
-Rather than repeating what is in
+Rather than repeating what others have said
 \cite{Sandve2013,Wilson2014,Lee2018a,Dryden2019,Akhmerov2020,Chue2021,Lees2022,Druskat2023,Akhmerov2023,Kumar2023,Struck2023,Reina2024},
 this tip is a prioritized checklist of things to do
 \emph{if you have time}.
@@ -633,9 +637,8 @@ please consult the next tip.
   so that people who want to use it (or contribute to it)
   can tell if it is working in their environment.
   These do not have to be formal unit tests \cite{Irving2021}:
-  as \cite{Taschuk2017} explains,
   even a handful of ``this input should produce this output'' checks
-  can save a lot of frustration.
+  can save a lot of frustration \cite{Taschuk2017},
   Including sample inputs is also helpful,
   and removes dependence on external data sources which may themselves face continuity challenges.
 
@@ -661,11 +664,12 @@ there will be less for you to do when you don't
 
 \section*{Tip 8: Do what you can (if you have to act quickly)}
 
-A paramedic is not a doctor who cuts corners,
-but rather someone who has been trained to work subject to very different constraints.
-\cite{Wilson2017} provides some guidance for ``good enough'' practices in research computing;
-other tips in this paper are in this vein,
-such as creating \texttt{.zip} archives of your project as an alternative to using version control.
+``Good enough'' practices in research computing,
+such as creating \texttt{.zip} archives of your project as an alternative to using version control,
+may be more appropriate that ``best practices'' in an emergency \cite{Wilson2017}.
+(By analogy,
+a paramedic is not a doctor who cuts corners,
+but rather someone who specializes in working under very different circumstances.)
 If you are short on time:
 
 \begin{enumerate}
@@ -744,7 +748,7 @@ and those who haven't been hit (yet) may be affected by survivors' guilt.
 Be angry,
 be sad,
 but remember that in the aftermath of a disaster---natural or man-made---people
-often become altruistic \cite{Yang2024}, resourceful, and brave.
+often become altruistic, resourceful, and brave \cite{Yang2024}.
 
 \section*{Tip 10: Organize}
 
@@ -761,9 +765,9 @@ and the best way to do that in a research context
 is to become active in professional associations
 and push them to take meaningful action.
 
-Many readers of this paper will find the thought of doing this uncomfortable.
-As Putnam points out \cite{Putnam2020},
-voluntary organizations have seen a slow but steady decline in membership over several decades.
+Many readers of this paper will find the thought of doing this uncomfortable,
+in large part because 
+voluntary organizations have seen a slow but steady decline in membership over several decades \cite{Putnam2020}.
 Although there are many contributing factors,
 the net result is that professionals aged 30--60
 are less likely to be involved in civil society and the political process than the generation before them.
@@ -790,7 +794,7 @@ Some of these tips will also age poorly.
 In order to provide a lasting resource that can be used going forward,
 we have set up a task force,
 hosted by CURIOSS, SustainOSS, and the Research Software Alliance.
-We aim to run monhtly meetings for the next year.
+We aim to run monthly meetings for the next year.
 
 If you have suggestions for tips which were not included here,
 you can contribute them to a living document,
