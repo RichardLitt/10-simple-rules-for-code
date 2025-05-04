@@ -71,15 +71,6 @@ Geoffrey Lentner (\orcid{0000-0001-9314-0683}),
 David Pérez-Suárez (\orcid{0000-0003-0784-6909}),
 and everyone else who provided feedback along the way.
 
-\section*{Notes}
-
-\begin{enumerate}
-\item
-  See \texttt{contributors.tex} for other contributors who will be added as authors or to the acknowledgments.
-\item
-  Superscript initials in the author list will be replaced with numbers once the contributor list stabilizes to match PLOS formatting guidelines.
-\end{enumerate}
-
 \section*{Abstract}
 
 Loss of key personnel has always been a risk for research software projects.
@@ -113,8 +104,9 @@ such as government laboratories, non-governmental organizations (NGOs), and non-
 as national research strategies are changed
 and associated public funding is redirected or cut entirely \cite{Nature2019,Nature2021,Nature2023,RatRisk2024,Nature2025}.
 
-Historically, open-source research software has been longer-lived than other kinds of open-source software 
-and government involvement has been associated with longer lifespan \cite{thakur2025}. 
+Historically,
+open-source research software has been longer-lived than other kinds of open-source software 
+and government involvement has been associated with longer lifespan \cite{Thakur2025}. 
 The challenges of responding to macro-level changes in software development support may be therefore new and unfamiliar to research software developers.
 In this changing environment,
 research software projects must be \emph{resilient}.
@@ -156,6 +148,34 @@ by initiatives such as \href{https://sfdora.org/}{DORA},
 \href{https://coara.eu/}{coARA},
 and \href{https://adore.software/}{ADORE.software}.
 
+\begin{quote}
+  \noindent
+  \textbf{Collecting wisdom}
+
+  In 2013,
+  the government of Canada ordered the closure of
+  five of the Department of Fisheries and Oceans' seven libraries \cite{Nikiforuk2013}.
+  No one knows how many thousands of volumes of irreplaceable environmental records were destroyed,
+  but even scientists who were directly affected did not make plans in case something similar happened again.
+  In contrast,
+  when faced with the prospect of a populist demagogue becoming president,
+  researchers in Argentina knew from their collective experience what might happen next
+  and took action accordingly \cite{DelBoca2024}.
+
+  We left many suggestions out of this paper due to space constraints
+  or because we felt they would age poorly.
+  What worries us is the ones we didn't include because
+  we have been lucky enough not to have to think about them.
+  In an effort to correct that,
+  we have set up a task force hosted by \href{https://curioss.org}{CURIOSS},
+  \href{https://sustainoss.org}{SustainOSS},
+  and the \href{https://www.researchsoft.org//}{Research Software Alliance},
+  and plan to run monthly meetings
+  to share ideas and support one another.
+  If you have suggestions,
+  please contribute them at \url{https://www.researchsoft.org/tf-succession-planning/}.
+\end{quote}
+
 \section*{Tip 1: Stay within the law}
 
 Ensuring your work remains usable is not worth putting yourself at legal risk.
@@ -164,9 +184,9 @@ make sure you have a legal right to do so.
 Most institutions and journals now have policies for licensing code and/or releasing it publicly \cite{Katz2018,Ham2019}.
 Funding agencies at various levels also often have policies
 (e.g.,
-EU\footnote{\url{https://web.archive.org/web/20250424181252/https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en} (archived on Apr 24 2025)},
-UKRI\footnote{\url{https://web.archive.org/web/20250422025105/https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/} (archived on Apr 22 2025)},
-and NASA\footnote{\url{https://web.archive.org/web/20250422005753/https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities/} (archived on Apr 22 2025)})
+EU\footnote{\url{https://web.archive.org/web/20250424181252/https://commission.europa.eu/about/departments-and-executive-agencies/digital-services/open-source-software-strategy_en} (archived 2025-04-24)},
+UKRI\footnote{\url{https://web.archive.org/web/20250422025105/https://www.ukri.org/manage-your-award/publishing-your-research-findings/making-your-research-data-open/} (archived 2025-04-22)},
+and NASA\footnote{\url{https://web.archive.org/web/20250422005753/https://science.nasa.gov/open-science/nasa-open-science-funding-opportunities/} (archived 2025-04-22)})
 which may or may not align with those of institutions and journals,
 and institutional policies may place restrictions on what you are allowed to say publicly about your situation.
 Our first actionable tip is therefore to find out what those policies are,
@@ -313,7 +333,10 @@ focus on making what you have accomplished findable and citable
 as discussed in the tips that follow.
 To help you prioritize,
 write up the goals you initially had for this project
-and ask how well they were served by what you actually did. This approach could lead you to understand that the project does not have to conclude, but can be integrated into another person's work, even without your continued participation.
+and ask how well they were served by what you actually did.
+This approach could lead you to understand that the project does not have to conclude,
+but can be integrated into someone else's work,
+even without your continued participation.
 
 If instead you hope to hand the project on to someone else,
 you can either choose a successor
@@ -448,9 +471,9 @@ made private,
 or deleted
 (also as a result of government takedowns\footnote{\url{https://github.com/github/transparency/tree/main/data/government_takedowns}});
 the platform itself may be shut down
-(as in the case of non-profit Gna!\footnote{\url{https://en.wikipedia.org/wiki/Gna!}}),
+(as happened to the non-profit Gna!\footnote{\url{https://en.wikipedia.org/wiki/Gna!}}),
 or it may change its revenue model
-(as in the case of SourceForge\footnote{\url{https://en.wikipedia.org/wiki/SourceForge}},
+(as happened with SourceForge\footnote{\url{https://en.wikipedia.org/wiki/SourceForge}},
 which once dominated the open source repository space in the way that GitHub does today \cite{Tamburri2020}).
 
 When you create projects on hosted services,
@@ -516,7 +539,9 @@ that package can contain all of the source code.
 Doing this also fosters community collaboration.
 When setting these up, you should ideally ensure that control over the distribution channels for a package is not limited to a single developer.
 However, this is not always possible.
-For example, while PyPI actively encourages this, CRAN policies allow only single point of contact.
+For example,
+while PyPI actively encourages this,
+CRAN policies allow only single point of contact.
 
 \section*{Tip 6: Encourage community adoption}
 
@@ -754,13 +779,6 @@ often become altruistic, resourceful, and brave \cite{Yang2024}.
 
 \section*{Tip 10: Organize}
 
-In 2013,
-the Conservative government of Canada ordered the closure of
-five of the Department of Fisheries and Oceans' seven libraries \cite{Nikiforuk2013}.
-No one knows how many thousands of volumes of irreplaceable environmental records were destroyed;
-what is clear now is that even scientists who were directly affected
-did not make plans to deal with a recurrence.
-
 There is little point surviving today's flood if you drown in tomorrow's.
 The best strategy is to take preventive action,
 and the best way to do that in a research context
@@ -785,23 +803,6 @@ but playing defense is just a way to lose more slowly.
 If we work together and accept that we and our institutions need to change,
 we can create a world in which research does not just survive,
 but thrives.
-
-\section*{Building on this work}
-
-This paper is not exhaustive.
-There are many steps we excluded due to space constraints,
-forgot to include,
-or did not know about.
-Some of these tips will also age poorly.
-In order to provide a lasting resource that can be used going forward,
-we have set up a task force,
-hosted by CURIOSS, SustainOSS, and the Research Software Alliance.
-We aim to run monthly meetings for the next year.
-
-If you have suggestions for tips which were not included here,
-you can contribute them to a living document,
-and join us as we hope to build a useful, living resource,
-\href{https://www.researchsoft.org/tf-succession-planning/}{here}.
 
 \bibliography{code-rules}
 
